@@ -1,0 +1,27 @@
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background: transparent;
+
+}
+
+.navbar-overlay{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(100px);
+    z-index: -1;
+}
+.navbar-flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 135px 13px;
+    align-items: center;
+    height: 148px;
+   
+}
+
+.links {
+    display: flex;
+}

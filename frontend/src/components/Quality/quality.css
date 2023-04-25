@@ -1,0 +1,23 @@
+.quality-section {
+    padding: 0 135px;
+}
+
+
+.quality-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quality-item {
+    width: 625px;
+    height: 495px;
+    background-color: red;
+}
+.quality-text-container {
+    
+
+}
+
+.quality-img-container {
+
+}

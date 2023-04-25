@@ -1,0 +1,8 @@
+.brand-container{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.brand-name {
+    white-space: nowrap;
+}

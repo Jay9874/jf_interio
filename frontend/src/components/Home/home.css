@@ -1,0 +1,13 @@
+.home-main-container {
+   width: 100%;
+   
+}
+.bg-img-container {
+    width: 100%;
+    height: 100vh; 
+}
+
+.bg-img-container img{
+    width: 100%;
+    height: 100%;
+}

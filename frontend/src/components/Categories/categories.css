@@ -1,0 +1,19 @@
+.cat-card {
+    width: 225px;
+    height: 265px;
+    display: inline-block;
+    background-color: red;
+}
+.categories {
+    padding: 24px 135px;
+}
+.category-card-container {
+    padding: 32px 0 16px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-header{
+
+}

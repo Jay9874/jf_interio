@@ -1,0 +1,12 @@
+.footer-container {
+    width: 100%;
+}
+
+.wrapper{
+    padding: 48px 135px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "a a a a"
+}
