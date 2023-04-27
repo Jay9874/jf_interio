@@ -1,6 +1,6 @@
 import React from 'react'
 import './home.css'
-import landing_img from '../../assets/images/landing_page.jpg'
+import landing_img from '../../assets/landing_page.jpg'
 import Categories from '../Categories/Categories'
 import Quality from '../Quality/Quality'
 

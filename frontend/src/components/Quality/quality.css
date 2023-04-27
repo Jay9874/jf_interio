@@ -6,12 +6,16 @@
 .quality-flex-container {
     display: flex;
     justify-content: space-between;
+    gap: 10px
 }
 
 .quality-item {
-    width: 625px;
-    height: 495px;
+    width: 580px;
+    height: 497px;
     background-color: red;
+    padding: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 .quality-text-container {
     
