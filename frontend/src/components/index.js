@@ -1,0 +1,6 @@
+export { default as Navbar } from './Navbar/Navbar'
+export { default as Categories } from './Categories/Categories'
+export { default as Explore } from './Explore/Explore'
+export { default as Footer } from './Footer/Footer'
+export { default as Quality } from './Quality/Quality'
+export { default as Review } from './Review/Review'

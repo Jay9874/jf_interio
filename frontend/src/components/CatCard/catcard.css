@@ -1,0 +1,40 @@
+.cat-card {
+    position: relative;
+    flex: 0 0 225px;
+    height: 265px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+
+.cat-bg-color {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 65%;
+    bottom: 0;
+    background-color: #eeedea;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.cat-bg-color:hover {
+    box-shadow: solid 2px #ccc;
+}
+
+.cat-img-ttl-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.cat-img-cont {
+    text-align: center;
+    padding: 32px 0 0;
+}
+
+.cat-ttl-cont {
+    text-align: center;
+    padding: 32px 0 0;
+}
