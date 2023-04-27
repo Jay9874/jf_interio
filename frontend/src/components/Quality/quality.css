@@ -2,24 +2,42 @@
     padding: 0 135px;
 }
 
+.para-container{
+    font-size: 1.1rem;
+    padding-top: 8px;
+}
 
 .quality-flex-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px
+    gap: 82px;
 }
 
-.quality-item {
-    width: 580px;
-    height: 497px;
-    background-color: red;
-    padding: 8px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+.sofa-chair-container{
+    margin-top: 30px;
 }
+
+
+
 .quality-text-container {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    border-radius: 20px;
+    background-color: #EEEDEA;
+    padding: 50px 62px;
 
+}
+.text-title-container{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+.text-para-container{
+    padding: 16px 0 0 90px;
+    font-size: 1.2rem;
 }
 
 .quality-img-container {

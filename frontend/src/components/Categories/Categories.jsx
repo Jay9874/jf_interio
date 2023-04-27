@@ -8,7 +8,7 @@ export default function Categories () {
       <div className='categories-container'>
         <div className='category-header-container'>
           <div className='category-header'>
-            <p>Popular Categories</p>
+            <h2>Popular Categories</h2>
           </div>
         </div>
         <div className='category-card-container'>
@@ -42,6 +42,17 @@ export default function Categories () {
               </div>
               <div className='cat-ttl-cont' style={{ padding: 0 }}>
                 <h3>Lamp</h3>
+              </div>
+            </div>
+          </div>
+          <div className='cat-card cat-cabinet'>
+            <div className='cat-bg-color' />
+            <div className='cat-img-ttl-cont'>
+              <div className='cat-img-cont' style={{ padding: 0 }}>
+                <img src={cat_cabinet} alt='cabinet' />
+              </div>
+              <div className='cat-ttl-cont' style={{ padding: 0 }}>
+                <h3>Cabinet</h3>
               </div>
             </div>
           </div>
