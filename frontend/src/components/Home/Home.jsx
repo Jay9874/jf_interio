@@ -1,6 +1,6 @@
 import React from 'react'
 import './home.css'
-import { Quality , Categories, Explore, Review } from '../index'
+import { Quality , Categories, Explore, Review, Offer } from '../index'
 import { landing_img } from '../../assets'
 
 export default function Home () {
@@ -14,6 +14,7 @@ export default function Home () {
         <Quality />
         <Explore />
         <Review />
+        <Offer />
       </div>
     </main>
   )

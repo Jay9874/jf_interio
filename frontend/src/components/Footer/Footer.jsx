@@ -51,10 +51,10 @@ export default function Footer () {
             <div className='download-list-container'>
               <ul>
                 <li>
-                  <img src={App_Store_Badge} alt='App Store' />
+                  <img src={App_Store_Badge} alt='App Store' width={108} height={32}/>
                 </li>
                 <li>
-                  <img src={Google_Play_Badge} alt='Google Play' />
+                  <img src={Google_Play_Badge} alt='Google Play' width={108} height={32}/>
                 </li>
               </ul>
             </div>

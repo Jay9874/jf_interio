@@ -3,8 +3,10 @@
     outline: 1px solid #2D2D1F;
     padding: 20px;
     border-radius: 20px;
-    /* white-space: nowrap; */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* height: 300px; */
+    transition:ease-in .15s;
+}
+.review-card:hover{
+    box-shadow: 0 16px 50px 0px #2D2D1F;
+    outline: none;
+    cursor: pointer;
 }

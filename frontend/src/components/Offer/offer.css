@@ -1,0 +1,48 @@
+.offer-section{
+    width: 100%;
+}
+.offer-container{
+    padding: 0 135px 100px;
+}
+.offer-bg-container{
+    position: relative;
+
+}
+.offer-bg-container img{
+    width: 100%;
+    border-radius: 20px;
+}
+.offer-gradient-container{
+    position: absolute;
+    width: 80%;
+    top: 0;
+    height: calc(100% - 4.5px);
+    background: linear-gradient(89.53deg, rgba(45, 45, 31, 0.97) -0.84%, rgba(45, 45, 31, 0) 90.32%);
+    border-radius: 20px;
+    z-index: 3;
+}
+.offer-content-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    height: calc(100% - 4.5px);
+    width: 35%;
+    top: 0;
+    color: #fff;
+}
+
+.offer-btn{
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: 1px solid #E1E1BB;
+    background: transparent;
+    color: #E1E1BB;
+    cursor: pointer;
+}
+.offer-btn:hover{
+    box-shadow: 0 16px 60px 0 #1b1906;
+}

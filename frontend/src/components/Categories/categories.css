@@ -11,14 +11,10 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 85px;
-    padding: 0 0 30px;
+    gap: 100px;
+    padding: 0 135px 30px;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none; 
-    border-width: 1px 8px;
-    border-left-color: #ccc;
-    border-right-color: #ccc;
-    border-radius: 20px;
 }
 .category-card-container::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */

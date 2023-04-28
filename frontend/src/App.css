@@ -4,10 +4,10 @@
   padding: 0;
 }
 
-body, html {
+body{
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   font-family: Open Sans, Source Sans Pro, Montserrat, sans-serif;
 }
 

@@ -42,8 +42,6 @@ export default function Review () {
           <h1>Our Reviews</h1>
         </div>
         <div className='review-card-container'>
-          <div className='review-edge-overlay review-left-edge' />
-          <div className='review-edge-overlay review-right-edge' />
           {reviews.length !== 0 ? (
             reviews.map(review => {
               return (
