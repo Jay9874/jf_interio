@@ -1,5 +1,6 @@
 .footer-container {
     width: 100%;
+    background-color: #EEEDEA;
 }
 
 .wrapper{
@@ -9,4 +10,12 @@
     grid-template-rows: 1fr;
     grid-template-areas:
     "a a a a"
+}
+
+.wrapper li{
+    padding-top: 10px;
+}
+
+.footer-copy-container{
+    text-align: center;
 }

@@ -1,7 +1,11 @@
 import React from 'react'
 import './footer.css'
+import { App_Store_Badge, Google_Play_Badge } from '../../assets'
 
 export default function Footer () {
+  const getYear = () => {
+    return new Date().getFullYear()
+  }
   return (
     <footer>
       <div className='footer-container'>
@@ -44,16 +48,20 @@ export default function Footer () {
             </div>
           </div>
           <div className='column download-column'>
-            <div className='download-head-container'>
-              <h4>Download App</h4>
-            </div>
             <div className='download-list-container'>
               <ul>
-                <li>Play Store</li>
-                <li>Apps Store</li>
+                <li>
+                  <img src={App_Store_Badge} alt='App Store' />
+                </li>
+                <li>
+                  <img src={Google_Play_Badge} alt='Google Play' />
+                </li>
               </ul>
             </div>
           </div>
+        </div>
+        <div className='footer-copy-container'>
+          <p>© {getYear()} JSF interio. All rights reserved.</p>
         </div>
       </div>
     </footer>
