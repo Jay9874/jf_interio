@@ -11,11 +11,10 @@ function App () {
     <BrowserRouter>
       <Navbar
         navlinks={[
-          { tag: 'Home', url: '' },
-          { tag: 'About Us', url: '/about' },
-          {tag: 'Categories', url: '/categories'},
-          {tag: 'Cart', url: '/cart'},
-          {tag: 'Profile', url: '/profile'}
+          { tag: 'Home', url: '' , type: 'text', icon:'none'},
+          {tag: 'Categories', url: '/categories', type: 'text', icon: 'none'},
+          {tag: 'Cart', url: '/cart', type: 'icon', icon: 'shopping_bag'},          
+          {tag: 'Profile', url: '/profile', type: 'icon', icon: 'account_circle'},
         ]}
       />
         <Routes>

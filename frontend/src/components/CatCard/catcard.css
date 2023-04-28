@@ -32,7 +32,13 @@
 .cat-img-cont {
     text-align: center;
     padding: 32px 0 0;
+    /* width: 280px;
+    height: 300px; */
 }
+/* .cat-img-cont img{
+    height: 100%;
+    width: 100%;
+} */
 
 .cat-ttl-cont {
     text-align: center;

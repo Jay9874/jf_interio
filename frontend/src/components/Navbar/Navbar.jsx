@@ -1,13 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Brand from '../Brand/Brand'
-import NavLink from '../NavLink/NavLink'
 import './navbar.css'
 
 export default function Navbar ({ navlinks }) {
-  function creatLink ({ tag, url }, indx) {
-    return <NavLink key={indx} tag={tag} url={url} />
-  }
-
   return (
     <div className='navbar'>
       <div className='navbar-overlay' />
@@ -15,7 +11,21 @@ export default function Navbar ({ navlinks }) {
         <div className='navbar-flex-item brand'>
           <Brand />
         </div>
-        <div className='navbar-flex-item links'>{navlinks.map(creatLink)}</div>
+        <div className='navbar-flex-item links'>
+          {navlinks.map((item, index) => {
+            return item.type === 'text' ? (
+              <div className='navlink-item' key={index}>
+                <Link to={item.url}>{item.tag}</Link>
+              </div>
+            ) : (
+              <div className='navlink-item' key={index}>
+                <Link to={item.url}>
+                  <span className='material-symbols-outlined'>{item.icon}</span>
+                </Link>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   )

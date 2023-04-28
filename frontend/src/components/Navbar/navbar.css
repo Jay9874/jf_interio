@@ -1,6 +1,6 @@
 .navbar{
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     /* backdrop-filter: blur(20px);
     background: transparent; */
@@ -26,4 +26,16 @@
 
 .links {
     display: flex;
+}
+
+.navlink-item{
+    padding: 0 16px;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

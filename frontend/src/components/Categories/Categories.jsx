@@ -1,7 +1,7 @@
 import React from 'react'
 import './categories.css'
 import CatCard from '../CatCard/CatCard'
-import { cat_chair, cat_sofa, cat_cabinet, cat_lamp } from '../../assets'
+import { cat_chair, cat_sofa, cat_cabinet, cat_lamp, cat_bed } from '../../assets'
 
 export default function Categories () {
   return (
@@ -22,9 +22,9 @@ export default function Categories () {
             alt='Cabinet'
           />
           <CatCard
-            cat_img={cat_cabinet}
-            cat_class='cat-cabinet'
-            alt='Cabinet'
+            cat_img={cat_lamp}
+            cat_class='cat-lamp'
+            alt='Lamp'
           />
         </div>
       </div>
