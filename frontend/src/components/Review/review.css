@@ -1,0 +1,34 @@
+.review-section{
+    width: 100%;
+}
+.review-container{
+    padding: 100px 135px 0;
+}
+.review-header-container{
+    text-align: center;
+}
+.review-card-container{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 22px;
+    padding: 35px 20px;
+}
+.review-card-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+/* .review-edge-overlay{
+    position: absolute;
+    height: 100%;
+    width: 15px;
+    z-index: 2;
+    background-color: #0000002c;
+    opacity: .5;
+}
+.review-left-edge{
+    left: 0;
+}
+.review-right-edge{
+    right: 0;
+} */

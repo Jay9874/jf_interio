@@ -1,0 +1,10 @@
+.review-card{
+    flex: 0 0 412px;
+    outline: 1px solid #2D2D1F;
+    padding: 20px;
+    border-radius: 20px;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* height: 300px; */
+}
