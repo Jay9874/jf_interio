@@ -1,17 +1,19 @@
 .explore-section{
-    width: 100%;
     background-color: #2D2D1F;
-    ;
+    
 }
 
 .explore-container{
     display: flex;
     justify-content: space-between;
-    padding: 0 135px;
+    padding: 50px 135px 0;
+    flex-wrap: wrap;
 }
 .explore-img-container{
     position: relative;
+    flex: 0 0 100%;
 }
+
 .explore-img-bg{
     position: absolute;
     right: 0;
@@ -27,6 +29,12 @@
     top: 0;
     left: 0;
     z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+.explore-img img{
+    height: 100%;
+    width: 100%;
 }
 
 .explore-text-container{
@@ -35,6 +43,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
+    flex: 0 0 100%;
 }
 .explore-text-btn p{
     padding: 20px 0;

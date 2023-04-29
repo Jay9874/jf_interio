@@ -6,7 +6,6 @@ import './navbar.css'
 export default function Navbar ({ navlinks }) {
   return (
     <div className='navbar'>
-      <div className='navbar-overlay' />
       <div className='navbar-flex-container'>
         <div className='navbar-flex-item brand'>
           <Brand />

@@ -1,12 +1,13 @@
 import React from 'react'
 import './cover.css'
 import { landing_img } from '../../assets'
-import { PriceTag } from '../index'
 
 export default function Cover () {
   return (
     <div className='bg-img-container'>
-      <img src={landing_img} alt='main-page-bg' />
+      <div className='bg-img'>
+        <img src={landing_img} alt='main-page-bg' />
+      </div>
       <div className='cover-text-container'>
         <div className='cover-text'>
           <div className='cover-text-title cover-text-item'>
@@ -37,11 +38,6 @@ export default function Cover () {
               </div>
             </form>
           </div>
-        </div>
-      </div>
-      <div className='cover-tag-container'>
-        <div className='cover-tag'>
-            {/* <PriceTag /> */}
         </div>
       </div>
     </div>
