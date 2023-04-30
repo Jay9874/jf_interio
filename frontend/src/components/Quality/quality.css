@@ -1,6 +1,5 @@
 .quality-section {
-    min-width: 412px;
-    overflow: scroll;
+    width: 100%;
 }
 
 .quality-flex-container {
