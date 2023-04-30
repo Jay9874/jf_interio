@@ -5,7 +5,7 @@ import { check, sofa_chair } from '../../assets'
 export default function Quality () {
   return (
     <div className='quality-section'>
-      <div className='quality-flex-container'>
+      <div className='quality-flex-container section-padding'>
         <div className='quality-item quality-img-container'>
           <div className='title-container'>
             <h2>

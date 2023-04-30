@@ -9,7 +9,7 @@ export default function Footer () {
   return (
     <footer>
       <div className='footer-container'>
-        <div className='wrapper'>
+        <div className='wrapper section-padding'>
           <div className='column company-column'>
             <div className='company-head-container'>
               <h4>Company</h4>

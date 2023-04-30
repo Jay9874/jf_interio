@@ -37,8 +37,8 @@ export default function Review () {
 
   return (
     <div className='review-section'>
-      <div className='review-container'>
-        <div className='review-header-container'>
+      <div className='review-container '>
+        <div className='review-header-container section-padding'>
           <h1>Our Reviews</h1>
         </div>
         <div className='review-card-container'>

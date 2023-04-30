@@ -5,7 +5,7 @@ import { explore } from '../../assets'
 export default function Explore () {
   return (
     <div className='explore-section'>
-      <div className='explore-container'>
+      <div className='explore-container section-padding'>
         <div className='explore-text-container explore-item'>
           <div className='explore-text-btn'>
             <h1>Design your dream home with the perfect furniture.</h1>

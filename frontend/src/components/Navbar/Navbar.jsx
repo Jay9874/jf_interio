@@ -6,7 +6,7 @@ import './navbar.css'
 export default function Navbar ({ navlinks }) {
   return (
     <div className='navbar'>
-      <div className='navbar-flex-container'>
+      <div className='navbar-flex-container section-padding'>
         <div className='navbar-flex-item brand'>
           <Brand />
         </div>

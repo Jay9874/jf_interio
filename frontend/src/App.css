@@ -21,3 +21,9 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
+
+@media (0px <= width <= 780px){
+  .section-padding{
+    padding: 0 15px;
+  }
+}

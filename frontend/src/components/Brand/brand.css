@@ -6,3 +6,9 @@
 .brand-name {
     white-space: nowrap;
 }
+
+@media (0 <= width <=742px){
+    .brand-container{
+        font-size: 1.5rem;
+    }
+}

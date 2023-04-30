@@ -6,7 +6,7 @@ import { cat_chair, cat_sofa, cat_cabinet, cat_lamp, cat_bed } from '../../asset
 export default function Categories () {
   return (
     <div className='categories'>
-      <div className='categories-container'>
+      <div className='categories-container section-padding'>
         <div className='category-header-container'>
           <div className='category-header'>
             <h2>Popular Categories</h2>
