@@ -1,63 +1,101 @@
 .quality-section {
-    width: 100%;
-}
-
-.para-container{
-    font-size: 1.1rem;
-    padding-top: 8px;
+    min-width: 412px;
+    overflow: scroll;
 }
 
 .quality-flex-container {
     display: flex;
-    justify-content: space-between;
-    gap: 82px;
-    padding-bottom: 100px;
+    padding: 0 135px 100px;
     flex-wrap: wrap;
-}
-.quality-img-container{
-    width: 100%;
+    justify-content: space-between;
+    /* gap: 10px; */
 }
 
-.sofa-chair-container{
+
+
+.sofa-chair-container {
     margin-top: 30px;
 }
-.sofa-chair-container img{
+
+.sofa-chair-container img {
     width: 100%;
     height: auto;
 }
 
+#quality-check-icon {
+    height: 36px;
+    width: 36px;
+}
 
+.quality-item {
+    max-width: 605px;
+}
 
 .quality-text-container {
     display: flex;
     flex-direction: column;
-    gap: 48px;
     border-radius: 20px;
     background-color: #EEEDEA;
-    padding: 50px 62px;
-    width: 100%;
+    padding: 50px 0;
+    gap: 20px;
+    height: fit-content;
 }
-.title-container{
+
+
+.title-container {
     display: flex;
     align-items: center;
     gap: 48px;
     font-size: 0.9rem;
     font-weight: lighter;
 }
-.para-container{
-    padding: 16px 0;
-    font-size: 1.2rem;
+
+.para-container {
+    padding: 16px 0 16px 10px;
+    font-size: 1.3rem;
+}
+
+.text-para-container {
+    font-size: 1.1rem;
+    padding: 10px 0 0 48px;
+}
+
+.text-title-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 /* Mobile view optimised */
-@media (0 <=width <=780px){
-    .text-title-container{
+
+@media (min-width: 780px) {
+
+    .quality-text-card {
+        padding: 0 62px;
+    }
+}
+
+@media (0 <=width <=780px) {
+    .text-title-container {
         font-size: 0.75rem;
     }
-    .text-para-container{
+
+    .text-para-container {
         font-size: 1rem;
+        padding: 10px 0 0 36px;
     }
-    .quality-text-container{
-        padding: 50px 0;
+
+    .quality-flex-container {
+        padding: 0 15px 100px;
+        /* justify-content: center; */
+    }
+
+    .quality-text-container {
+        padding: 50px 15px;
+    }
+
+    #quality-check-icon {
+        height: 24px;
+        width: 24px;
     }
 }

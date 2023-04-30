@@ -28,9 +28,9 @@
     justify-content: center;
     z-index: 4;
     height: calc(100% - 4.5px);
-    width: 35%;
     top: 0;
     color: #fff;
+    padding-left: 15px;
 }
 
 .offer-btn{

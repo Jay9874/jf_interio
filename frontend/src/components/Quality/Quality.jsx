@@ -5,7 +5,7 @@ import { check, sofa_chair } from '../../assets'
 export default function Quality () {
   return (
     <div className='quality-section'>
-      <div className='quality-flex-container section-padding'>
+      <div className='quality-flex-container'>
         <div className='quality-item quality-img-container'>
           <div className='title-container'>
             <h2>
@@ -20,9 +20,9 @@ export default function Quality () {
           </div>
         </div>
         <div className='quality-item quality-text-container'>
-          <div className='text-upper'>
+          <div className='text-upper quality-text-card'>
             <div className='text-title-container'>
-              <img src={check} alt='check' height={36} width={36} />
+              <img id='quality-check-icon' src={check} alt='check'/>
               <h2>
                 A customized experience
                 <br /> for every style
@@ -35,9 +35,9 @@ export default function Quality () {
               </p>
             </div>
           </div>
-          <div className='text-lower'>
+          <div className='text-lower quality-text-card'>
             <div className='text-title-container'>
-              <img src={check} alt='check' height={36} width={36} />
+              <img id='quality-check-icon' src={check} alt='check' />
               <h2>Competitive prices</h2>
             </div>
             <div className='text-para-container'>
