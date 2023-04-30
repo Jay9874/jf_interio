@@ -5,7 +5,7 @@ import { offer_bg } from '../../assets'
 export default function Offer () {
   return (
     <div className='offer-section'>
-      <div className='offer-container section-padding'>
+      <div className='offer-container'>
         <div className='offer-bg-container'>
           <img src={offer_bg} alt='Offer' />
           <div className='offer-gradient-container' />

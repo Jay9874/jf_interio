@@ -19,3 +19,9 @@
 .review-card-container::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
+
+@media (0 <=width <=780px){
+    .review-card-container{
+        padding: 20px 30px 100px;
+    }
+}

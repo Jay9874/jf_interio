@@ -9,7 +9,7 @@ export default function Footer () {
   return (
     <footer>
       <div className='footer-container'>
-        <div className='wrapper section-padding'>
+        <div className='wrapper'>
           <div className='column company-column'>
             <div className='company-head-container'>
               <h4>Company</h4>
@@ -48,20 +48,28 @@ export default function Footer () {
             </div>
           </div>
           <div className='column download-column'>
-            <div className='download-list-container'>
-              <ul>
-                <li>
-                  <img src={App_Store_Badge} alt='App Store' width={108} height={32}/>
-                </li>
-                <li>
-                  <img src={Google_Play_Badge} alt='Google Play' width={108} height={32}/>
-                </li>
-              </ul>
-            </div>
+            <ul className='download-list-container'>
+              <li>
+                <img
+                  src={App_Store_Badge}
+                  alt='App Store'
+                  width={108}
+                  height={32}
+                />
+              </li>
+              <li>
+                <img
+                  src={Google_Play_Badge}
+                  alt='Google Play'
+                  width={108}
+                  height={32}
+                />
+              </li>
+            </ul>
           </div>
         </div>
         <div className='footer-copy-container'>
-          <p>© {getYear()} JSF interio. All rights reserved.</p>
+          <p>© {getYear()} JSF interio</p>
         </div>
       </div>
     </footer>

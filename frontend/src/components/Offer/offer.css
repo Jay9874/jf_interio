@@ -46,3 +46,12 @@
 .offer-btn:hover{
     box-shadow: 0 16px 60px 0 #1b1906;
 }
+
+@media (0 <=width <=780px){
+    .offer-container{
+        padding: 0 15px 50px;
+    }
+    .offer-content{
+        font-size: 0.75rem;
+    }
+}
