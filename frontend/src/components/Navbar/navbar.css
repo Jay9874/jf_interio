@@ -30,8 +30,43 @@
     color: inherit;
     white-space: nowrap;
 }
+.menu-btn-open{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16px;
+    width: 28px;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+.menu-btn-close{
+    flex-direction: column;
+    justify-content: center;
+    height: 16px;
+    width: 28px;
+    cursor: pointer;
+}
+.menu-btn-line{
+    width: 100%;
+    background-color: #000;
+    border-radius: 1.25px;
+    height: 2.5px;
+}
 
-a {
-    text-decoration: none;
-    color: inherit;
+
+@media (min-width: 866px){
+    .menu-btn-open{
+        display: none;
+    }
+}
+
+@media (0 <= width <= 866px){
+    .navbar-flex-container{
+        padding: 0 15px;
+    }
+    .navlink-text{
+        display: none;
+    }
+    .menu-btn-open, .menu-btn-close{
+        display: flex;
+    }
 }

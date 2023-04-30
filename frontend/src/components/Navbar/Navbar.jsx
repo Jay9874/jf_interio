@@ -1,19 +1,26 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Brand from '../Brand/Brand'
 import './navbar.css'
 
 export default function Navbar ({ navlinks }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleMenuClick = () => {
+    console.log('menu clicked')
+    setMenuOpen(prev => !prev)
+  }
+
   return (
     <div className='navbar'>
-      <div className='navbar-flex-container section-padding'>
+      <div className='navbar-flex-container'>
         <div className='navbar-flex-item brand'>
           <Brand />
         </div>
         <div className='navbar-flex-item links'>
           {navlinks.map((item, index) => {
             return item.type === 'text' ? (
-              <div className='navlink-item' key={index}>
+              <div className='navlink-item navlink-text' key={index}>
                 <Link to={item.url}>{item.tag}</Link>
               </div>
             ) : (
@@ -24,6 +31,15 @@ export default function Navbar ({ navlinks }) {
               </div>
             )
           })}
+          <div
+            className={`navlink-item menu-btn-${
+              menuOpen ? 'close' : 'open'
+            }`}
+            onClick={handleMenuClick}
+          >
+            <div className='menu-btn-line line-top' />
+            <div className='menu-btn-line line-bottom' />
+          </div>
         </div>
       </div>
     </div>
