@@ -36,21 +36,28 @@
     background-color: #EEEDEA;
     padding: 50px 62px;
     width: 100%;
-    word-break: break-all;
-
 }
-.text-title-container{
+.title-container{
     display: flex;
     align-items: center;
     gap: 48px;
     font-size: 0.9rem;
     font-weight: lighter;
 }
-.text-para-container{
-    padding: 16px 0 0 90px;
+.para-container{
+    padding: 16px 0;
     font-size: 1.2rem;
 }
 
-.quality-img-container {
-
+/* Mobile view optimised */
+@media (0 <=width <=780px){
+    .text-title-container{
+        font-size: 0.75rem;
+    }
+    .text-para-container{
+        font-size: 1rem;
+    }
+    .quality-text-container{
+        padding: 50px 0;
+    }
 }

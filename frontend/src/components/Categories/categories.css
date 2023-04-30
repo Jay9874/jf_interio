@@ -24,3 +24,15 @@
 .category-header {
     font-size: 1.1rem;
 }
+
+/* Mobile view optimisation */
+
+@media (0 <=width <=780px){
+    .category-header-container{
+        padding: 20px 15px 39px;
+    }
+    .category-card-container{
+        padding: 0 0 30px;
+        gap: 50px;
+    }
+}

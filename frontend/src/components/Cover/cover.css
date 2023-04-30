@@ -60,7 +60,8 @@
     border-radius: 29px;
     border: none;
     outline: 1px solid #2D2D1F;
-    background: transparent;
+    background-color: #7c756b47;
+    color: #2D2D1F;
     font-size: 1.2rem;
 }
 
@@ -109,13 +110,16 @@
     .cover-text-container {
         width: 100%;
     }
-    .cover-search-container{
+
+    .cover-search-container {
         padding: 25px 15px 0;
     }
-    .cover-text{
+
+    .cover-text {
         display: block;
         padding: 25px 15px 0;
     }
+
     .cover-text-title {
         font-size: 1rem;
     }
