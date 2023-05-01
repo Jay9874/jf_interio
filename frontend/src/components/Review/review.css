@@ -24,4 +24,7 @@
     .review-card-container{
         padding: 20px 30px 100px;
     }
+    .review-header-container {
+        padding: 0 15px;
+    }
 }
