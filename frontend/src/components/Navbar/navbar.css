@@ -118,7 +118,7 @@
 
 /************************************ Mobile View ***************************** */
 @media (min-width: 866px){
-    .menu-btn-open{
+    .menu-btn{
         display: none;
     }
 }
@@ -129,8 +129,5 @@
     }
     .navlink-text{
         display: none;
-    }
-    .menu-btn-open, .menu-btn-close{
-        display: flex;
     }
 }
