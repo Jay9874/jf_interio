@@ -30,7 +30,12 @@
     color: inherit;
     white-space: nowrap;
 }
-.menu-btn-open{
+
+
+
+/************************************* Menu Button ********************** */
+
+/* .menu-btn-open{
     flex-direction: column;
     justify-content: space-between;
     height: 16px;
@@ -50,9 +55,68 @@
     background-color: #000;
     border-radius: 1.25px;
     height: 2.5px;
+} */
+
+
+.menu-btn {
+    position: relative;
+    transition-duration: .4s;
+    height: 16px;
+    width: 28px;
+    cursor: pointer;
 }
 
+.menu-btn-line {
+    position: absolute;
+    width: 28px;
+    background-color: #000;
+    border-radius: 1.25px;
+    height: 2.5px;
+    left: 16px;
+    transition: all .4s;
+    /* animation: topmove 2s toprotate 2s; */
+}
+.top-detach{
+    top: 0;
+}
+.bottom-detach{
+    bottom: 0;
+}
+/* Keyframes
+@keyframes topmove {
+    0% { translate: 0 0; }
+    100% { translate: 0 5.5px; }
+  }
+@keyframes botmove {
+    0% { translate: 0 0; }
+    100% { translate: 0 -5.5px; }
+  }
+  @keyframes toprotate {
+    0% { rotate: 0deg; }
+    10%, 90% { rotate: 180deg; }
+    100% { rotate: 360deg; }
+  }
+  @keyframes botrotate {
+    0% { rotate: 0deg; }
+    10%, 90% { rotate: 180deg; }
+    100% { rotate: 360deg; }
+  }
+   */
 
+
+
+.line-top{
+    top: 0;
+    transform: translateY(6.75px) rotate(45deg);
+    
+}
+.line-bottom{
+    bottom: 0;
+    transform: translateY(-6.75px) rotate(-45deg);
+    /* animation: botmove 2s botrotate 2s; */
+}
+
+/************************************ Mobile View ***************************** */
 @media (min-width: 866px){
     .menu-btn-open{
         display: none;

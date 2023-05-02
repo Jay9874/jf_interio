@@ -31,14 +31,17 @@ export default function Navbar ({ navlinks }) {
               </div>
             )
           })}
-          <div
-            className={`navlink-item menu-btn-${
-              menuOpen ? 'close' : 'open'
-            }`}
-            onClick={handleMenuClick}
-          >
-            <div className='menu-btn-line line-top' />
-            <div className='menu-btn-line line-bottom' />
+          <div className='navlink-item menu-btn' onClick={handleMenuClick}>
+            <div
+              className={`menu-btn-line ${
+                menuOpen ? 'line-top' : 'top-detach'
+              }`}
+            />
+            <div
+              className={`menu-btn-line ${
+                menuOpen ? 'line-bottom' : 'bottom-detach'
+              }`}
+            />
           </div>
         </div>
       </div>
