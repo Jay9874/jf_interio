@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     position: sticky;
     top: 0;
     /* backdrop-filter: blur(20px);
@@ -7,6 +7,7 @@
     z-index: 9999;
 
 }
+
 .navbar-flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +16,7 @@
     padding: 0 135px;
     align-content: center;
     min-height: 148px;
-   
+
 }
 
 .links {
@@ -24,7 +25,7 @@
     align-items: center;
 }
 
-.navlink-item{
+.navlink-item {
     padding: 0 16px;
     text-decoration: none;
     color: inherit;
@@ -76,12 +77,15 @@
     transition: all .4s;
     /* animation: topmove 2s toprotate 2s; */
 }
-.top-detach{
+
+.top-detach {
     top: 0;
 }
-.bottom-detach{
+
+.bottom-detach {
     bottom: 0;
 }
+
 /* Keyframes
 @keyframes topmove {
     0% { translate: 0 0; }
@@ -105,29 +109,77 @@
 
 
 
-.line-top{
+.line-top {
     top: 0;
     transform: translateY(6.75px) rotate(45deg);
-    
+
 }
-.line-bottom{
+
+.line-bottom {
     bottom: 0;
     transform: translateY(-6.75px) rotate(-45deg);
     /* animation: botmove 2s botrotate 2s; */
 }
 
+
+/************************************ Navbar dropdown ************************ */
+.navbar-dropdown {
+    width: 100%;
+    transition: all .4s;
+    z-index: 9999;
+}
+
+.dropdown-close {
+    display: none;
+    height: 0;
+}
+
+.dropdown-open {
+    height: calc(100vh - 148px);
+}
+
+.navbar-dropdown-container {
+    padding: 0 50px;
+    height: calc(100vh - 148px);
+    background-color: #deddda;
+    position: relative;
+}
+
+.navbar-dropdown-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 50px 0;
+
+}
+
+.dropdown-link {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 /************************************ Mobile View ***************************** */
-@media (min-width: 866px){
-    .menu-btn{
+@media (min-width: 1082px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .dropdown-open {
         display: none;
     }
 }
 
-@media (0 <= width <= 866px){
-    .navbar-flex-container{
-        padding: 0 15px;
-    }
-    .navlink-text{
+
+
+@media (0 <=width <=1082px) {
+    .navlink-text {
         display: none;
+    }
+}
+
+@media(0 <=width <=780px) {
+    .navbar-flex-container {
+        padding: 0 15px;
     }
 }

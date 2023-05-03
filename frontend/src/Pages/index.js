@@ -1,0 +1,5 @@
+export { default as Home } from './Home/Home'
+export { default as Repair } from './Repair/Repair'
+export { default as Kitchen } from './Kitchen/Kitchen'
+export { default as Bedroom } from './Bedroom/Bedroom'
+export { default as Hallroom } from './Hallroom/Hallroom'
