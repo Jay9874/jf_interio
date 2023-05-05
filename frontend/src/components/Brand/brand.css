@@ -7,7 +7,7 @@
     white-space: nowrap;
 }
 
-@media (0 <= width <=742px){
+@media (0 <= width <=780px){
     .brand-container{
         font-size: 1.5rem;
     }

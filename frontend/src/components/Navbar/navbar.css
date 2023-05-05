@@ -150,7 +150,7 @@
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    padding: 50px 0;
+    padding: 25px 0;
 
 }
 
@@ -170,16 +170,25 @@
     }
 }
 
-
-
 @media (0 <=width <=1082px) {
     .navlink-text {
         display: none;
     }
 }
 
+@media (min-width: 780px) {
+    .navbar-dropdown-container {
+        padding: 0 150px;
+    }
+
+}
+
 @media(0 <=width <=780px) {
     .navbar-flex-container {
         padding: 0 15px;
+    }
+
+    .navbar-dropdown-container {
+        padding: 0 50px;
     }
 }

@@ -1,10 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Brand from '../Brand/Brand'
 import './navbar.css'
 
-export default function Navbar ({ navlinks, dropdownLinks }) {
+export default function Navbar ({ navlinks }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [width, setWidth] = useState(window.innerWidth)
+  const updateDimensions = () => {
+    setWidth(window.innerWidth)
+    if (width > 1082) {
+      setMenuOpen(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('resize', updateDimensions)
+    return () => window.removeEventListener('resize', updateDimensions)
+  }, [width])
 
   const handleMenuClick = () => {
     console.log('menu clicked')
@@ -19,7 +30,7 @@ export default function Navbar ({ navlinks, dropdownLinks }) {
     <div className='navbar'>
       <div className='navbar-flex-container'>
         <div className='navbar-flex-item brand'>
-          <Brand />
+          <Brand onClick={handleLinkClick} />
         </div>
         <div className='navbar-flex-item links'>
           {navlinks.map((item, index) => {

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { Footer, About, Navbar } from './components/index'
-import { Home, Repair, Kitchen, Bedroom, Hallroom } from './Pages/index'
+import { Home, Repair, Kitchen, Bedroom, Livingroom, Profile, Cart } from './Pages/index'
 import { navlinks } from './constants'
 
 function App () {
@@ -15,7 +15,9 @@ function App () {
           <Route exact path='/repair' element={<Repair />} />
           <Route exact path='/kitchen' element={<Kitchen />} />
           <Route exact path='/bedroom' element={<Bedroom />} />
-          <Route exact path='/hallroom' element={<Hallroom />} />
+          <Route exact path='/livingroom' element={<Livingroom />} />
+          <Route exact path='/profile' element={<Profile />} />
+          <Route exact path='/cart' element={<Cart />} />
         </Routes>
       </BrowserRouter>
       <Footer />
