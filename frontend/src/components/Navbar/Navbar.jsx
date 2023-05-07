@@ -5,7 +5,10 @@ import './navbar.css'
 
 export default function Navbar ({ navlinks }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [display, setDisplay] = useState('none')
   const [width, setWidth] = useState(window.innerWidth)
+
+
   const updateDimensions = () => {
     setWidth(window.innerWidth)
     if (width > 1082) {
@@ -18,9 +21,17 @@ export default function Navbar ({ navlinks }) {
   }, [width])
 
   const handleMenuClick = () => {
-    console.log('menu clicked')
-    setMenuOpen(prev => !prev)
+    if (!menuOpen) {
+      setDisplay('block')
+      setMenuOpen(true)
+    } else {
+      setMenuOpen(false)
+      setTimeout(() => {
+        setDisplay('none')
+      }, 400)
+    }
   }
+
   const handleLinkClick = () => {
     console.log('link clicked')
     setMenuOpen(false)
@@ -61,9 +72,8 @@ export default function Navbar ({ navlinks }) {
         </div>
       </div>
       <div
-        className={`navbar-dropdown ${
-          menuOpen ? 'dropdown-open' : 'dropdown-close'
-        }`}
+        className={`navbar-dropdown ${menuOpen ? 'active' : 'out'}`}
+        style={{ display: { display } }}
       >
         <div className='navbar-dropdown-container'>
           <div className='navbar-dropdown-items'>

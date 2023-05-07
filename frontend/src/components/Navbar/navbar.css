@@ -1,14 +1,14 @@
 .navbar {
     position: sticky;
     top: 0;
+    z-index: 999;
     /* backdrop-filter: blur(20px);
     background: transparent; */
     background-color: #deddda;
-    z-index: 9999;
-
 }
 
 .navbar-flex-container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -107,8 +107,6 @@
   }
    */
 
-
-
 .line-top {
     top: 0;
     transform: translateY(6.75px) rotate(45deg);
@@ -123,27 +121,67 @@
 
 
 /************************************ Navbar dropdown ************************ */
+
+
+
 .navbar-dropdown {
-    width: 100%;
-    transition: all .4s;
-    z-index: 9999;
-}
-
-.dropdown-close {
-    display: none;
-    height: 0;
-}
-
-.dropdown-open {
-    height: calc(100vh - 148px);
-}
-
-.navbar-dropdown-container {
-    padding: 0 50px;
-    height: calc(100vh - 148px);
+    position: absolute;
     background-color: #deddda;
-    position: relative;
+    width: 100%;
+    height: calc(100vh - 148px);
 }
+.navbar-dropdown.active{
+    animation: slide-down .4s;
+    /* top: 30px; */
+    display: block;
+  }
+  .navbar-dropdown.out{
+    animation: slide-up .4s;
+    animation-fill-mode: forwards;
+    display: block;
+  }
+  
+  
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      /* top: 0; */
+      transform: scale(1);
+      /* transform: translateY(30px); */
+      -webkit-transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      /* top: 30px; */
+      transform: scale(1);
+      /* transform: translateY(30px); */
+      -webkit-transform: scale(1);
+    }
+  }
+  @keyframes slide-up {
+    0% {
+      display: block;
+      opacity: 1;
+      /* top: 0; */
+      transform: scale(1);
+      /* transform: translateY(-300px); */
+      -webkit-transform: scale(1);
+    }
+    99% {
+      display: block;
+      opacity: 0;
+      transform: scale(0);
+      /* transform: translateY(0); */
+      -webkit-transform: scale(0);
+    }
+    100% {
+      display: none;
+      opacity: 0;
+      /* transform: translateY(0); */
+      transform: scale(0);
+      -webkit-transform: scale(0);
+    }
+  }
 
 .navbar-dropdown-items {
     display: flex;
