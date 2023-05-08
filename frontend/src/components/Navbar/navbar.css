@@ -1,8 +1,7 @@
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 999;
-    background-color: #deddda;
+    z-index: 99;
 }
 
 .navbar-flex-container {
@@ -10,11 +9,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    background-color: #deddda;
     justify-content: space-between;
     padding: 0 135px;
     align-content: center;
     min-height: 148px;
-
 }
 
 .links {
@@ -54,6 +53,7 @@
     border-radius: 1.25px;
     background-color: #000;
 }
+
 .btn-span-container span:nth-child(2) {
     position: absolute;
     height: 2.5px;
@@ -95,33 +95,38 @@
     100% {
         bottom: 6.75px;
         transform: rotate(45deg);
-        
+
     }
 }
-@keyframes toprev{
-    0%{
+
+@keyframes toprev {
+    0% {
         transform: rotate(-45deg);
         top: 6.75px;
     }
-    50%{
+
+    50% {
         transform: rotate(0);
         top: 6.75px;
     }
-    100%{
+
+    100% {
         top: 0;
     }
 }
 
-@keyframes botrev{
-    0%{
+@keyframes botrev {
+    0% {
         transform: rotate(45deg);
         bottom: 6.75px;
     }
-    50%{
+
+    50% {
         transform: rotate(0);
         bottom: 6.75px;
     }
-    100%{
+
+    100% {
         bottom: 0;
     }
 
@@ -138,10 +143,12 @@
     animation: botmove .4s;
     animation-fill-mode: forwards;
 }
-.btn-span-container.out span:nth-child(1){
+
+.btn-span-container.out span:nth-child(1) {
     animation: toprev .4s;
 }
-.btn-span-container.out span:nth-child(2){
+
+.btn-span-container.out span:nth-child(2) {
     animation: botrev .4s;
 }
 
@@ -153,65 +160,44 @@
 
 .navbar-dropdown {
     position: absolute;
-    background-color: #deddda;
+    background-color: #deddda;   
     width: 100%;
     height: calc(100vh - 148px);
+    z-index: -1;
+}
+
+.navbar-dropdown-container {
+    height: 100%;
 }
 
 .navbar-dropdown.active {
     animation: slide-down .4s;
-    display: block;
+    animation-fill-mode: forwards;
 }
 
 .navbar-dropdown.out {
     animation: slide-up .4s;
     animation-fill-mode: forwards;
-    display: block;
 }
 
 
 @keyframes slide-down {
     0% {
-        opacity: 0;
-        /* top: 0; */
-        transform: scale(1);
-        /* transform: translateY(30px); */
-        -webkit-transform: scale(0);
+        bottom: 0;
+
     }
 
     100% {
-        opacity: 1;
-        /* top: 30px; */
-        transform: scale(1);
-        /* transform: translateY(30px); */
-        -webkit-transform: scale(1);
+        bottom: calc(148px - 100vh);
     }
 }
 
 @keyframes slide-up {
     0% {
-        display: block;
-        opacity: 1;
-        /* top: 0; */
-        transform: scale(1);
-        /* transform: translateY(-300px); */
-        -webkit-transform: scale(1);
+        bottom: calc(148px - 100vh);
     }
-
-    99% {
-        display: block;
-        opacity: 0;
-        transform: scale(0);
-        /* transform: translateY(0); */
-        -webkit-transform: scale(0);
-    }
-
     100% {
-        display: none;
-        opacity: 0;
-        /* transform: translateY(0); */
-        transform: scale(0);
-        -webkit-transform: scale(0);
+        bottom: 0;
     }
 }
 
@@ -228,7 +214,31 @@
     font-size: 2rem;
     font-weight: 400;
 }
+.dropdown-link.fadeout{
+    animation: fadeout .4s;
+    animation-fill-mode: forwards;
+}
+.dropdown-link.fadein{
+    animation: fadein .4s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: .75;
+    }
+}
 
+@keyframes fadeout{
+    from{
+        opacity: .75;
+    }
+    to{
+        opacity: 0;
+    }
+}
 /************************************ Mobile View ***************************** */
 @media (min-width: 1082px) {
     .menu-btn {

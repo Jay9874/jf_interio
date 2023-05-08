@@ -5,15 +5,18 @@ import './navbar.css'
 
 export default function Navbar ({ navlinks }) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [display, setDisplay] = useState('none')
   const [width, setWidth] = useState(window.innerWidth)
   const [toggleMenu, setToggleMenu] = useState('')
+  const [displayDropdown, setDisplayDropdown] = useState('none')
+  const [linkFade, setLinkFade] = useState('')
 
   const updateDimensions = () => {
     setWidth(window.innerWidth)
     if (width > 1082) {
       setMenuOpen(false)
       setToggleMenu('')
+      setDisplayDropdown('none')
+      setLinkFade('')
     }
   }
   useEffect(() => {
@@ -23,16 +26,18 @@ export default function Navbar ({ navlinks }) {
 
   const handleMenuClick = () => {
     if (!menuOpen) {
-      setDisplay('block')
       setMenuOpen(true)
       setToggleMenu('active')
+      setDisplayDropdown('block')
+      setLinkFade('fadein')
     } else {
       setMenuOpen(false)
       if (toggleMenu === 'active') {
         setToggleMenu('out')
       }
+      setLinkFade('fadeout')
       setTimeout(() => {
-        setDisplay('none')
+        setDisplayDropdown('none')
       }, 400)
     }
   }
@@ -41,6 +46,10 @@ export default function Navbar ({ navlinks }) {
     console.log('link clicked')
     setMenuOpen(false)
     setToggleMenu('out')
+    setLinkFade('fadeout')
+    setTimeout(() => {
+      setDisplayDropdown('none')
+    }, 400)
   }
 
   return (
@@ -77,7 +86,7 @@ export default function Navbar ({ navlinks }) {
       </div>
       <div
         className={`navbar-dropdown ${menuOpen ? 'active' : 'out'}`}
-        style={{ display: { display } }}
+        style={{ display: displayDropdown }}
       >
         <div className='navbar-dropdown-container'>
           <div className='navbar-dropdown-items'>
@@ -85,7 +94,7 @@ export default function Navbar ({ navlinks }) {
               return (
                 item.type === 'text' && (
                   <div
-                    className='dropdown-link'
+                    className={`dropdown-link ${linkFade}`}
                     onClick={handleLinkClick}
                     key={index}
                   >
