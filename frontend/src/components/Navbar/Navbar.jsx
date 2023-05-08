@@ -40,6 +40,7 @@ export default function Navbar ({ navlinks }) {
   const handleLinkClick = () => {
     console.log('link clicked')
     setMenuOpen(false)
+    setToggleMenu('out')
   }
 
   return (
