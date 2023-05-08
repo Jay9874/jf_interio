@@ -7,12 +7,13 @@ export default function Navbar ({ navlinks }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [display, setDisplay] = useState('none')
   const [width, setWidth] = useState(window.innerWidth)
-
+  const [toggleMenu, setToggleMenu] = useState('')
 
   const updateDimensions = () => {
     setWidth(window.innerWidth)
     if (width > 1082) {
       setMenuOpen(false)
+      setToggleMenu('')
     }
   }
   useEffect(() => {
@@ -24,8 +25,12 @@ export default function Navbar ({ navlinks }) {
     if (!menuOpen) {
       setDisplay('block')
       setMenuOpen(true)
+      setToggleMenu('active')
     } else {
       setMenuOpen(false)
+      if (toggleMenu === 'active') {
+        setToggleMenu('out')
+      }
       setTimeout(() => {
         setDisplay('none')
       }, 400)
@@ -57,17 +62,15 @@ export default function Navbar ({ navlinks }) {
               </div>
             )
           })}
-          <div className='navlink-item menu-btn' onClick={handleMenuClick}>
+          {/* Structure for menu button */}
+          <div className='navlink-item menu-btn'>
             <div
-              className={`menu-btn-line ${
-                menuOpen ? 'line-top' : 'top-detach'
-              }`}
-            />
-            <div
-              className={`menu-btn-line ${
-                menuOpen ? 'line-bottom' : 'bottom-detach'
-              }`}
-            />
+              className={`btn-span-container ${toggleMenu}`}
+              onClick={handleMenuClick}
+            >
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>

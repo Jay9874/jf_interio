@@ -11,6 +11,7 @@
 .cover-text-container {
     position: absolute;
     top: 0;
+    width: 100%;
     background: transparent;
 }
 
@@ -36,6 +37,7 @@
 }
 
 .cover-text-desc {
+    max-width: 45ch;
     font-size: 1.2rem;
     word-spacing: .12rem;
     letter-spacing: .05rem;
@@ -61,13 +63,13 @@
     border-radius: 29px;
     border: none;
     outline: 1px solid #2D2D1F;
-    background-color: #7c756b47;
-    color: #2D2D1F;
+    background: transparent;
+    color: #000000;
     font-size: 1.2rem;
 }
 
 .cover-search-form input::placeholder {
-    color: #2D2D1F;
+    color: hsl(0, 0%, 0%);
 }
 
 /* autocomplete customization */
@@ -102,8 +104,11 @@
 
 /* Optimised for mobile view */
 @media (min-width: 780px) {
-    .cover-text-container {
+    .cover-text {
         padding: 50px 135px;
+    }
+    .cover-search-container{
+        padding: 25px 135px 0;
     }
 }
 
