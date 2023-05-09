@@ -16,10 +16,15 @@ export default function Footer () {
             </div>
             <div className='company-list-container'>
               <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Categories</li>
-                <li>Contact Us</li>
+                <li>
+                  <a href='#'>About Us</a>
+                </li>
+                <li>
+                  <a href='#'>Categories</a>
+                </li>
+                <li>
+                  <a href='#'>Contact Us</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -29,9 +34,15 @@ export default function Footer () {
             </div>
             <div className='support-list-container'>
               <ul>
-                <li>Help Center</li>
-                <li>Safety Center</li>
-                <li>Community Guidlines</li>
+                <li>
+                  <a href='#'>Help Center</a>
+                </li>
+                <li>
+                  <a href='#'>Safety Center</a>
+                </li>
+                <li>
+                  <a href='#'>Community Guidlines</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -41,9 +52,15 @@ export default function Footer () {
             </div>
             <div className='legal-list-container'>
               <ul>
-                <li>Cookies Policy</li>
-                <li>Privacy Policy</li>
-                <li>Terms Of Service</li>
+                <li>
+                  <a href='#'>Cookies Policy</a>
+                </li>
+                <li>
+                  <a href='#'>Privacy Policy</a>
+                </li>
+                <li>
+                  <a href='#'>Terms Of Service</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -69,7 +86,7 @@ export default function Footer () {
           </div>
         </div>
         <div className='footer-copy-container'>
-          <p>Copyright © {getYear()} JSF interio  </p>
+          <p>Copyright © {getYear()} JSF interio </p>
         </div>
       </div>
     </footer>
