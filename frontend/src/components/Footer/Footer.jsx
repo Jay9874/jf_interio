@@ -69,7 +69,7 @@ export default function Footer () {
           </div>
         </div>
         <div className='footer-copy-container'>
-          <p>© JSF interio Copyright {getYear()}</p>
+          <p>Copyright © {getYear()} JSF interio  </p>
         </div>
       </div>
     </footer>

@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;800&family=Montserrat:wght@300;400;900&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  min-width: 365px;
+  overflow-y: scroll;
+  font-weight: 200;
   font-family: Open Sans, Source Sans Pro, Montserrat, sans-serif;
 }
 
@@ -16,16 +19,25 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
 li {
   list-style: none;
 }
-p, h1, h2, h3, h4, h5, h6 {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
 
-@media (0px <= width <= 780px){
-  .section-padding{
+@media (0px <=width <=780px) {
+  .section-padding {
     padding: 0 15px;
   }
 }
+

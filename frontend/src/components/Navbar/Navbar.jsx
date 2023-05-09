@@ -67,7 +67,7 @@ export default function Navbar ({ navlinks }) {
             ) : (
               <div className='navlink-item' key={index}>
                 <Link to={item.url}>
-                  <span className='material-symbols-outlined'>{item.icon}</span>
+                <ion-icon name={item.name}></ion-icon>
                 </Link>
               </div>
             )

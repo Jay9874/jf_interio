@@ -4,7 +4,7 @@
 
 .explore-img-container {
     position:relative;
-    width: 100%;
+    min-width: 320px;
 }
 
 .explore-img-bg {
@@ -36,11 +36,15 @@
     color: #aaa;
     padding: 50px 135px;
     z-index: 10;
+    min-width: 320px;
 }
 
-.explore-text-btn p {
+.explore-text-btn h1 {
     padding: 20px 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+.explore-text-btn p{
+    font-size: 1rem;
 }
 
 .explore-btn {
@@ -48,6 +52,7 @@
     outline: 1px solid #E1E1BB;
     cursor: pointer;
     padding: 10px 15px;
+    margin: 25px 0;
     border-radius: 20px;
     color: #fff;
     background-color: inherit;
@@ -59,7 +64,11 @@
     transform: translateY(-.32rem);
     outline: none;
 }
-
+@media (max-width: 400px){
+    .explore-text-btn h1{
+        font-size: 1.25rem;
+    }
+}
 @media (0 <=width <=684px){
     .explore-img{
         left: 0;

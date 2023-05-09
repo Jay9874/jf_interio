@@ -5,8 +5,8 @@ const navlinks = [
   { tag: 'Kitchen', url: '/kitchen', type: 'text', icon: 'none' },
   { tag: 'Living', url: '/livingroom', type: 'text', icon: 'none' },
   { tag: 'Repairing', url: '/repair', type: 'text', icon: 'none' },
-  { tag: 'Cart', url: '/cart', type: 'icon', icon: 'shopping_bag' },
-  { tag: 'Profile', url: '/profile', type: 'icon', icon: 'account_circle' }
+  { tag: 'Cart', url: '/cart', type: 'icon', name: 'cart-outline' },
+  { tag: 'Profile', url: '/profile', type: 'icon', name: 'person-circle-outline' },
 ]
 
-export { navlinks}
+export { navlinks }
