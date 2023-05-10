@@ -1,11 +1,10 @@
 import React from 'react'
 import './livingroom.css'
+import { livingCatalogue } from '../../constants'
+import Catalogue from '../../components/Catalogue/Catalogue'
 
-export default function Livingroom() {
+export default function Livingroom () {
   return (
-    <div>
-        <h1>Welcome to Living room section</h1>
-        <p>We are working on it.</p>
-    </div>
+    <Catalogue sectionName='Livingroom' allCatalogues={livingCatalogue} />
   )
 }

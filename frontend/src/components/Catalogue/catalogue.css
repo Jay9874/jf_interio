@@ -1,0 +1,41 @@
+.bedroom-main{
+    width: 100%;
+    background-color: var(--main-bg-color);
+}
+
+.bedroom-wrapper{
+    padding: 0 135px;
+}
+.bedroom-head-container{
+    padding: 50px 0 20px;
+}
+.bedroom-head-container h1{
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.goto-bedroom-heading{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--goto-heading-color)
+}
+
+/* Bedroom Catalogues */
+.bedroom-catalogue-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 15px 50px;
+    gap: 40px;
+}
+
+
+
+
+
+/* Mobile View */
+@media (max-width: 780px){
+    .bedroom-wrapper{
+        padding: 0 15px;
+    }
+}

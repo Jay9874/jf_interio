@@ -1,0 +1,48 @@
+.bedroom-catalogue-card{
+    flex: 0 0 350px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 2px 4px 12px rgb(0, 0, 0, .08);
+    cursor: pointer;
+}
+.bedroom-catalogue-name{
+    padding: 32px 16px;
+}
+.bedroom-catalogue-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bedroom-catalogue-img{
+    width: 60%;
+    height: 265px;
+}
+.bedroom-catalogue-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.catalogue-card-goto-cont{
+    position: relative;
+}
+.catalogue-card-goto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 16px 15px;
+}
+.catalogue-card-goto p{
+    font-size: 1rem;
+}
+.bedroom-catalogue-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--universal-bg-color);
+}
+.bedroom-catalogue-btn:hover{
+    background-color: #eeedea9f
+}

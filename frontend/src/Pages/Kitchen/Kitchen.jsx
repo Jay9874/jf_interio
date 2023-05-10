@@ -1,11 +1,8 @@
 import React from 'react'
 import './kitchen.css'
+import { kitchenCatalogue } from '../../constants'
+import Catalogue from '../../components/Catalogue/Catalogue'
 
-export default function Kitchen() {
-  return (
-    <div>
-        <h1>Welcome to Kitchen section</h1>
-        <p>We are working on it.</p>
-    </div>
-  )
+export default function Kitchen () {
+  return <Catalogue sectionName='Kitchen' allCatalogues={kitchenCatalogue} />
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Brand from '../Brand/Brand'
 import './navbar.css'
@@ -16,7 +16,6 @@ export default function Navbar ({ navlinks }) {
       setMenuOpen(false)
       setToggleMenu('')
       setDisplayDropdown('none')
-      setLinkFade('')
     }
   }
   useEffect(() => {
@@ -52,7 +51,6 @@ export default function Navbar ({ navlinks }) {
       setDisplayDropdown('none')
     }, 400)
   }
- 
 
   return (
     <div className='navbar'>

@@ -1,6 +1,7 @@
-ion-icon{
+ion-icon {
     font-size: 24px;
 }
+
 .navbar {
     position: sticky;
     top: 0;
@@ -163,7 +164,7 @@ ion-icon{
 
 .navbar-dropdown {
     position: absolute;
-    background-color: #deddda;   
+    background-color: #deddda;
     width: 100%;
     height: calc(100vh - 148px);
     z-index: -1;
@@ -187,7 +188,6 @@ ion-icon{
 @keyframes slide-down {
     0% {
         bottom: 0;
-
     }
 
     100% {
@@ -199,6 +199,7 @@ ion-icon{
     0% {
         bottom: calc(148px - 100vh);
     }
+
     100% {
         bottom: 0;
     }
@@ -217,31 +218,37 @@ ion-icon{
     font-size: 2rem;
     font-weight: 400;
 }
-.dropdown-link.fadeout{
+
+.dropdown-link.fadeout {
     animation: fadeout .4s;
     animation-fill-mode: forwards;
 }
-.dropdown-link.fadein{
+
+.dropdown-link.fadein {
     animation: fadein .4s;
     animation-fill-mode: forwards;
 }
-@keyframes fadein{
-    from{
+
+@keyframes fadein {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: .75;
     }
 }
 
-@keyframes fadeout{
-    from{
+@keyframes fadeout {
+    from {
         opacity: .75;
     }
-    to{
+
+    to {
         opacity: 0;
     }
 }
+
 /************************************ Mobile View ***************************** */
 @media (min-width: 1082px) {
     .menu-btn {
@@ -257,21 +264,22 @@ ion-icon{
     .navlink-text {
         display: none;
     }
+
 }
 
 @media (min-width: 780px) {
     .navbar-dropdown-container {
         padding: 0 150px;
     }
-
 }
 
 @media(0 <=width <=780px) {
+    
     .navbar-flex-container {
         padding: 0 15px;
     }
-
     .navbar-dropdown-container {
         padding: 0 50px;
     }
 }
+
