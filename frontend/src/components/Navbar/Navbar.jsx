@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Brand from '../Brand/Brand'
 import './navbar.css'
@@ -24,7 +24,7 @@ export default function Navbar ({ navlinks }) {
     return () => window.removeEventListener('resize', updateDimensions)
   }, [width])
 
-  const handleMenuClick = () => {
+  const handleMenuClick = e => {
     if (!menuOpen) {
       setMenuOpen(true)
       setToggleMenu('active')
@@ -42,32 +42,44 @@ export default function Navbar ({ navlinks }) {
     }
   }
 
-  const handleLinkClick = () => {
-    console.log('link clicked')
+  const handleLinkClick = e => {
     setMenuOpen(false)
-    setToggleMenu('out')
+    if (toggleMenu === 'active') {
+      setToggleMenu('out')
+    }
     setLinkFade('fadeout')
     setTimeout(() => {
       setDisplayDropdown('none')
     }, 400)
   }
+ 
 
   return (
     <div className='navbar'>
       <div className='navbar-flex-container'>
         <div className='navbar-flex-item brand'>
-          <Brand onClick={handleLinkClick} />
+          <Brand brandClick={handleLinkClick} />
         </div>
         <div className='navbar-flex-item links'>
           {navlinks.map((item, index) => {
             return item.type === 'text' ? (
-              <div className='navlink-item navlink-text' key={index}>
-                <Link to={item.url}>{item.tag}</Link>
+              <div
+                className='navlink-item navlink-text'
+                key={index}
+                onClick={handleLinkClick}
+              >
+                <Link to={item.url} name={item.tag}>
+                  {item.tag}
+                </Link>
               </div>
             ) : (
-              <div className='navlink-item' key={index}>
-                <Link to={item.url}>
-                <ion-icon name={item.name}></ion-icon>
+              <div
+                className='navlink-item'
+                key={index}
+                onClick={handleLinkClick}
+              >
+                <Link to={item.url} name={item.tag}>
+                  <ion-icon name={item.name}></ion-icon>
                 </Link>
               </div>
             )
@@ -98,7 +110,9 @@ export default function Navbar ({ navlinks }) {
                     onClick={handleLinkClick}
                     key={index}
                   >
-                    <Link to={item.url}>{item.tag}</Link>
+                    <Link to={item.url} name={item.tag}>
+                      {item.tag}
+                    </Link>
                   </div>
                 )
               )

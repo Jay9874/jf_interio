@@ -5,6 +5,7 @@ import { Home, Repair, Kitchen, Bedroom, Livingroom, Profile, Cart } from './Pag
 import { navlinks } from './constants'
 
 function App () {
+  
   return (
     <div className='App'>
       <BrowserRouter>

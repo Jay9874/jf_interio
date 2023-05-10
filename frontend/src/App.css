@@ -14,7 +14,7 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 365px;
+  width: 100%;
   overflow-y: scroll;
   font-weight: 200;
   font-family: Open Sans, Source Sans Pro, Montserrat, sans-serif;
@@ -44,6 +44,11 @@ h6 {
   margin: 0;
 }
 
+@media screen and (max-width: 365px) {
+  body{
+    min-width: 365px;
+  }
+}
 @media (0px <=width <=780px) {
   .section-padding {
     padding: 0 15px;
