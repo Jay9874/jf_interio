@@ -15,6 +15,7 @@ import {
   showcase
 } from '../assets'
 
+// Navlinks static data
 const navlinks = [
   { tag: 'Home', url: '', type: 'text', icon: 'none' },
   { tag: 'Bedroom', url: '/bedroom', type: 'text', icon: 'none' },
@@ -27,6 +28,35 @@ const navlinks = [
     url: '/profile',
     type: 'icon',
     name: 'person-circle-outline'
+  }
+]
+
+// Footer links static data
+const footerlinks = [
+  {
+    title: 'Company',
+    links: [
+      { tag: 'About Us', url: '/aboutus' },
+      { tag: 'Contact Us', url: '/contactus' },
+      { tag: 'Categories', url: '/categories' }
+    ]
+  },
+  {
+    title: 'Legal',
+    links: [
+      { tag: 'Terms & Conditions', url: '/termsandconditions' },
+      { tag: 'Privacy Policy', url: '/privacypolicy' },
+      { tag: 'Cookies Policy', url: '/cookiespolicy' }
+    ]
+  },
+  {
+    title: 'Support',
+    links: [
+      { tag: 'Help Center', url: '/helpcenter' },
+      { tag: 'Safety Center', url: '/safetycenter' },
+      { tag: 'FAQs', url: '/faqs' },
+      { tag: 'Community Guidelines', url: '/communityguidelines' }
+    ]
   }
 ]
 
@@ -119,4 +149,10 @@ const livingCatalogue = [
   }
 ]
 
-export { bedroomCatalogue, kitchenCatalogue, livingCatalogue, navlinks }
+export {
+  bedroomCatalogue,
+  kitchenCatalogue,
+  livingCatalogue,
+  navlinks,
+  footerlinks
+}
