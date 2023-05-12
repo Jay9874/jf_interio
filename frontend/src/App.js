@@ -3,6 +3,7 @@ import './App.css'
 import { Footer, About, Navbar } from './components/index'
 import { Home, Repair, Kitchen, Bedroom, Livingroom, Profile, Cart } from './Pages/index'
 import { navlinks } from './constants'
+import MyRoutes from './routes/MyRoutes'
 
 function App () {
   
@@ -19,6 +20,7 @@ function App () {
           <Route exact path='/livingroom' element={<Livingroom />} />
           <Route exact path='/profile' element={<Profile />} />
           <Route exact path='/cart' element={<Cart />} />
+          <Route exact path='/:categorie' element={<MyRoutes />} />
         </Routes>
       </BrowserRouter>
       <Footer />

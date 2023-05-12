@@ -65,19 +65,19 @@ const footerlinks = [
 const bedroomCatalogue = [
   {
     tag: 'Wardrobe',
-    url: 'bedroom/wardrobe',
+    url: '/wardrobe',
     goto: 'Search through 300+ designs',
     src: wardrobe
   },
   {
     tag: 'Bed',
-    url: 'bedroom/bed',
+    url: '/bed',
     goto: 'Search through 350+ designs',
     src: bed
   },
   {
     tag: 'Side Table',
-    url: 'bedroom/sidetable',
+    url: '/sidetable',
     goto: 'Search through 50+ designs',
     src: sidetable
   },
@@ -92,25 +92,25 @@ const bedroomCatalogue = [
 const kitchenCatalogue = [
   {
     tag: 'Cabinet',
-    url: 'kitchen/cabinet',
+    url: '/cabinet',
     goto: 'Search through 50+ designs',
     src: kitchencabinet
   },
   {
     tag: 'Sink',
-    url: 'kitchen/sink',
+    url: '/sink',
     goto: 'Search through 50+ designs',
     src: sink
   },
   {
     tag: 'Chimney',
-    url: 'kitchen/chimney',
+    url: '/chimney',
     goto: 'Search through 50+ designs',
     src: chimney
   },
   {
     tag: 'Trolley',
-    url: 'kitchen/trolley',
+    url: '/trolley',
     goto: 'Search through 50+ designs',
     src: trolley
   }
@@ -119,31 +119,31 @@ const kitchenCatalogue = [
 const livingCatalogue = [
   {
     tag: 'Sofa',
-    url: 'living/sofa',
+    url: '/sofa',
     goto: 'Search through 50+ designs',
     src: sofabed
   },
   {
     tag: 'Table',
-    url: 'living/table',
+    url: '/table',
     goto: 'Search through 50+ designs',
     src: table
   },
   {
     tag: 'Chair',
-    url: 'living/chair',
+    url: '/chair',
     goto: 'Search through 50+ designs',
     src: chair
   },
   {
     tag: 'TV Unit',
-    url: 'living/tvunit',
+    url: '/tvunit',
     goto: 'Search through 50+ designs',
     src: tvunit
   },
   {
     tag: 'Showcase',
-    url: 'living/showcase',
+    url: '/showcase',
     goto: 'Search through 50+ designs',
     src: showcase
   }

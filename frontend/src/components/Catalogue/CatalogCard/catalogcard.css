@@ -4,6 +4,11 @@
     background-color: #fff;
     box-shadow: 2px 4px 12px rgb(0, 0, 0, .08);
     cursor: pointer;
+    transition: all .2s;
+}
+.bedroom-catalogue-card:hover{
+    transform: scale(1.02);
+    box-shadow: 6px 10px 12px rgb(0, 0, 0, .08);
 }
 .bedroom-catalogue-name{
     padding: 32px 16px;

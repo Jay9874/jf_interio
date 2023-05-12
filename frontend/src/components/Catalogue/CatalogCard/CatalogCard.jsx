@@ -1,9 +1,14 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './catalogcard.css'
 
-export default function CatalogCard ({ name, img, btnText }) {
+export default function CatalogCard ({ name, img, btnText, url }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(url);
+  }
   return (
-    <div className='bedroom-catalogue-card'>
+    <div className='bedroom-catalogue-card' onClick={handleClick}>
       <div className='bedroom-catalogue-name'>
         <h3>{name}</h3>
       </div>
@@ -15,9 +20,11 @@ export default function CatalogCard ({ name, img, btnText }) {
       <div className='catalogue-card-goto-cont'>
         <div className='catalogue-card-goto'>
           <p>{btnText}</p>
-          <div className='bedroom-catalogue-btn'>
-            <ion-icon name='arrow-forward-outline'></ion-icon>
-          </div>
+          <a href={url}>
+            <div className='bedroom-catalogue-btn'>
+              <ion-icon name='arrow-forward-outline'></ion-icon>
+            </div>
+          </a>
         </div>
       </div>
     </div>

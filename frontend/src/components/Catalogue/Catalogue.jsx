@@ -21,6 +21,7 @@ export default function Catalogue ({ sectionName, allCatalogues }) {
                 name={catalogue.tag}
                 img={catalogue.src}
                 btnText={catalogue.goto}
+                url={catalogue.url}
               />
             ))}
           </div>
