@@ -1,19 +1,18 @@
 import React from 'react'
-import './sofa.css'
+import './table.css'
 
 import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
-
-export default function Sofa () {
+export default function Table () {
   const allCatalogues = [
-    { title: 'Sofa' },
+    { title: 'Table' },
     {
       links: [
-        'Single Seater',
-        'Double Seater',
-        'Triple Seater',
-        'L Shaped',
-        'Sofa Cum Bed',
-        'With Storage',
+        'Dining Table',
+        'Coffee Table',
+        'Study Table',
+        'Office Table',
+        'Computer Table',
+        'Bedside Table'
       ]
     }
   ]

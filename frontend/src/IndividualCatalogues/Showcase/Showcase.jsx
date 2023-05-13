@@ -1,19 +1,16 @@
 import React from 'react'
-import './sofa.css'
-
+import './showcase.css'
 import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
 
-export default function Sofa () {
+export default function Showcase () {
   const allCatalogues = [
-    { title: 'Sofa' },
+    { title: 'Showcase' },
     {
       links: [
-        'Single Seater',
-        'Double Seater',
-        'Triple Seater',
-        'L Shaped',
-        'Sofa Cum Bed',
-        'With Storage',
+        'Open',
+        'With Glass',
+        'With Glass and Storage',
+        'With Drawers',
       ]
     }
   ]

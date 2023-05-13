@@ -8,7 +8,7 @@ export default function Catalogue ({ sectionName, allCatalogues }) {
       <div className='bedroom-wrapper'>
         <div className='bedroom-head-container'>
           <h1>{sectionName}.</h1>
-          <span className='goto-bedroom-heading'>
+          <span className='goto-heading'>
             {' '}
             Travel through catalogues
           </span>

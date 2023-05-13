@@ -1,19 +1,16 @@
 import React from 'react'
-import './sofa.css'
-
+import './tvunit.css'
 import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
 
-export default function Sofa () {
+export default function TVUnit () {
   const allCatalogues = [
-    { title: 'Sofa' },
+    { title: 'TV Unit' },
     {
       links: [
-        'Single Seater',
-        'Double Seater',
-        'Triple Seater',
-        'L Shaped',
-        'Sofa Cum Bed',
+        'Just Stand',
         'With Storage',
+        'With showcase',
+        'Wall Mount',
       ]
     }
   ]
