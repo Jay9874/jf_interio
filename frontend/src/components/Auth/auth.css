@@ -8,10 +8,10 @@
 }
 
 .auth-form-container {
-    flex: 1 1 80%;
     background-color: #deddda59;
     backdrop-filter: blur(10px);
     padding: 30px;
+    width: 300px;
     border-radius: 20px;
 }
 .auth-form-switcher{
