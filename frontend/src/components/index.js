@@ -7,4 +7,5 @@ export { default as Review } from './Review/Review'
 export { default as Offer } from './Offer/Offer'
 export { default as Cover } from './Cover/Cover'
 export { default as About } from './About/About'
+export { default as Auth } from './Auth/Auth'
 

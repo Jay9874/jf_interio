@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Brand from '../Brand/Brand'
 import './navbar.css'
+import Auth from '../Auth/Auth'
 
 export default function Navbar ({ navlinks }) {
+  const { pathname } = useLocation()
+  const [isAuth, setIsAuth] = useState(false)
+  const [authVisible, setAuthVisible] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
   const [toggleMenu, setToggleMenu] = useState('')
@@ -52,6 +56,16 @@ export default function Navbar ({ navlinks }) {
     }, 400)
   }
 
+  const handleNavIconClick = e => {
+    handleLinkClick()
+    if (!isAuth) {
+      setAuthVisible(true)
+    }
+  }
+  function hideAuthForm () {
+    setAuthVisible(false)
+  }
+
   return (
     <div className='navbar'>
       <div className='navbar-flex-container'>
@@ -74,9 +88,9 @@ export default function Navbar ({ navlinks }) {
               <div
                 className='navlink-item'
                 key={index}
-                onClick={handleLinkClick}
+                onClick={handleNavIconClick}
               >
-                <Link to={item.url} name={item.tag}>
+                <Link to={isAuth ? item.url : pathname} name={item.tag}>
                   <ion-icon name={item.name}></ion-icon>
                 </Link>
               </div>
@@ -118,6 +132,7 @@ export default function Navbar ({ navlinks }) {
           </div>
         </div>
       </div>
+      {authVisible && <Auth hideAuthForm={hideAuthForm} />}
     </div>
   )
 }

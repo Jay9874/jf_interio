@@ -1,12 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 import './App.css'
 import { Footer, About, Navbar } from './components/index'
-import { Home, Repair, Kitchen, Bedroom, Livingroom, Profile, Cart } from './Pages/index'
+import {
+  Home,
+  Repair,
+  Kitchen,
+  Bedroom,
+  Livingroom,
+  Profile,
+  Cart
+} from './Pages/index'
 import { navlinks } from './constants'
 import MyRoutes from './routes/MyRoutes'
+import Protected from './utils/Protected'
 
 function App () {
-  
+  const [isAuth, setIsAuth] = useState(false)
   return (
     <div className='App'>
       <BrowserRouter>

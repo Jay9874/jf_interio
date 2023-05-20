@@ -1,0 +1,35 @@
+.auth-form-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.auth-form-container {
+    flex: 1 1 80%;
+    background-color: #deddda59;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+}
+.auth-form-switcher{
+    display: flex;
+}
+.auth-form-switcher-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 50%;
+}
+.auth-form-switcher-btns button{
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+.auth-form{
+    display: flex;
+    flex-direction: column;
+}
