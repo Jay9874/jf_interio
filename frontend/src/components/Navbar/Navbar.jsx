@@ -58,9 +58,7 @@ export default function Navbar ({ navlinks }) {
 
   const handleNavIconClick = e => {
     handleLinkClick()
-    if (!isAuth) {
-      setAuthVisible(true)
-    }
+    setAuthVisible((prev) => !prev);
   }
   function hideAuthForm () {
     setAuthVisible(false)

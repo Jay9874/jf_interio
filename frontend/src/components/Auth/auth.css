@@ -3,16 +3,42 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: calc(100vh - 148px);
     position: absolute;
     z-index: 10;
 }
 
+.auth-shadow-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: inherit;
+    /* background-color: #fff; */
+    /* background-color: rgb(0, 0, 0, .5); */
+    /* filter: brightness(.5); */
+    z-index: 5;
+}
+
+.auth-content-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
 .auth-form-container {
+    width: 400px;
+    /* background-color: blue; */
     background-color: #deddda59;
     backdrop-filter: blur(10px);
-    padding: 30px;
-    width: 300px;
     border-radius: 20px;
+    padding: 10px;
+}
+.auth-form-main{
+    padding: 30px;
 }
 .auth-form-switcher{
     display: flex;
@@ -28,8 +54,64 @@
     border: none;
     font-size: 1.2rem;
     background-color: transparent;
+    cursor: pointer;
 }
 .auth-form{
     display: flex;
     flex-direction: column;
+    padding: 32px 0 0;
+}
+.auth-input-container{
+    padding: 30px 0 0;
+}
+.auth-input-container div:not(:first-child){
+    padding: 10px 0 0;
+}
+
+
+.auth-form-heading{
+    text-align: center;
+}
+
+.auth-form-inputs{
+    height: 32px;
+    font-size: 1.1rem;
+    background: transparent;
+    outline: none;
+    border: 2px solid var(--input-outline-color);
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+.auth-form-inputs::placeholder{
+    color: gray;
+}
+.auth-form-inputs:focus{
+    border: 2px solid rgb(77, 77, 255);
+}
+.auth-form label{
+    font-size: 1.2rem;
+    display: block;
+    padding: 0 0 4px;
+}
+.auth-form-btn{
+    flex: 0 0 auto;
+    padding: 10px 56px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.01rem;
+    cursor: pointer;
+    background-color: #384b38;
+    color: var(--main-bg-color);
+}
+.auth-btn-container{
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+}
+
+@media screen and (max-width: 500px) {
+    .auth-form-container{
+        width: 80%;
+    }
 }
