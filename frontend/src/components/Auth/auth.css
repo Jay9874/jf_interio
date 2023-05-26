@@ -58,7 +58,7 @@
 /******************************** Switcher animation ************************/
 .form-switch-login {
     position: relative;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 26px 0 0;
 
 }
 
@@ -69,31 +69,31 @@
 
 .form-switch-signup {
     position: relative;
-    border-radius: 20px 20px 0 0;
+    border-radius: 26px 20px 0 0;
 }
 
 .form-switch-login.active ::after {
     content: "";
-    width: 40px;
-    height: 20px;
+    width: 54px;
+    height: 26px;
     position: absolute;
     bottom: 0;
     right: 0;
     background: transparent;
-    border-radius: 0 0 20px 0;
-    box-shadow: 20px 0 0 0 var(--universal-bg-color);
+    border-radius: 0 0 26px 0;
+    box-shadow: 26px 0 0 0 var(--universal-bg-color);
 }
 
 .form-switch-signup.active ::before {
     content: "";
-    width: 40px;
-    height: 20px;
+    width: 54px;
+    height: 26px;
     position: absolute;
     bottom: 0;
     left: 0;
     background: transparent;
-    border-radius: 0 0 0 20px;
-    box-shadow: -20px 0 0 0 var(--universal-bg-color);
+    border-radius: 0 0 0 26px;
+    box-shadow: -26px 0 0 0 var(--universal-bg-color);
 }
 
 /******************************** Switcher animation end **********************************/
@@ -140,6 +140,14 @@
     border: 2px solid rgb(77, 77, 255);
 }
 
+.auth-form-inputs:focus:valid {
+    border: 2px solid green;
+}
+
+.auth-form-inputs:focus:invalid {
+    border: 2px solid red;
+}
+
 .auth-form label {
     font-size: 1.2rem;
     display: block;
@@ -151,18 +159,95 @@
     padding: 10px 56px;
     outline: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 18px;
     font-size: 1.01rem;
     cursor: pointer;
     background-color: #384b38;
     color: var(--main-bg-color);
 }
 
+.auth-form-btn:disabled {
+    background-color: #446d44;
+    cursor: not-allowed;
+}
+
+
 .auth-btn-container {
     display: flex;
     justify-content: center;
     padding: 32px 0;
 }
+
+/************************* Loader animation **********************/
+
+.auth-submit-loader {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.auth-submit-loader div {
+    position: absolute;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.auth-submit-loader div:nth-child(1) {
+    left: -10px;
+    animation: stage1 0.6s infinite;
+}
+
+.auth-submit-loader div:nth-child(2) {
+    left: -10px;
+    animation: stage2 0.6s infinite;
+}
+
+.auth-submit-loader div:nth-child(3) {
+    left: 6px;
+    animation: stage2 0.6s infinite;
+}
+
+.auth-submit-loader div:nth-child(4) {
+    left: 22px;
+    animation: stage3 0.6s infinite;
+}
+
+@keyframes stage1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes stage3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes stage2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(16px, 0);
+    }
+}
+
+
+/*************************** Mobile view ***************** */
 
 @media screen and (max-width: 500px) {
     .auth-form-container {

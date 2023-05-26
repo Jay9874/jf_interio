@@ -16,8 +16,10 @@
 }
 
 body {
+  -webkit-tap-highlight-color: transparent;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   min-width: 365px;
   font-weight: 200;
   overflow-x: auto;

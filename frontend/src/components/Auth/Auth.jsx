@@ -5,6 +5,20 @@ export default function Auth ({ hideAuthForm }) {
   const [login, setLogin] = useState(true)
   const [authHeading, setAuthHeading] = useState('Welcome Back')
   const [authButtonText, setAuthButtonText] = useState('Login')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [authFormLogin, setAuthFormLogin] = useState({
+    email: '',
+    password: ''
+  })
+  const [authFormSignup, setAuthFormSignup] = useState({
+    fullname: '',
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  })
+
   const authFormRef = useRef(null)
   const wrapperRef = useRef(null)
   useOutsideAlerter(wrapperRef)
@@ -28,18 +42,29 @@ export default function Auth ({ hideAuthForm }) {
 
   function switchToLogin () {
     setLogin(true)
+    setLoading(false)
     setAuthHeading('Welcome Back')
     setAuthButtonText('Login')
   }
 
   function switchToSignup () {
     setLogin(false)
+    setLoading(false)
     setAuthHeading("Let's start afresh")
     setAuthButtonText('Create')
   }
 
+  function handleAuthSubmit (e) {
+    e.preventDefault()
+    setLoading(true)
+    setError('')
+  }
   return (
-    <div className='auth-form-popup' ref={authFormRef}>
+    <div
+      className='auth-form-popup'
+      ref={authFormRef}
+      onSubmit={handleAuthSubmit}
+    >
       <div className='auth-shadow-container'></div>
       <div className='auth-content-container'>
         <div className='auth-form-container' ref={wrapperRef}>
@@ -77,6 +102,7 @@ export default function Auth ({ hideAuthForm }) {
                       type='text'
                       id='fullname'
                       placeholder='Ansh Sharma'
+                      required
                     />
                   </div>
                 )}
@@ -89,6 +115,7 @@ export default function Auth ({ hideAuthForm }) {
                       type='text'
                       id='username'
                       placeholder='anshsharma'
+                      required
                     />
                   </div>
                 )}
@@ -100,6 +127,7 @@ export default function Auth ({ hideAuthForm }) {
                     type='email'
                     id='email'
                     placeholder='email@example.com'
+                    required
                   />
                 </div>
                 {login && (
@@ -110,6 +138,7 @@ export default function Auth ({ hideAuthForm }) {
                       type='password'
                       id='password'
                       placeholder='~N}ypepD6^5(U;~B'
+                      required
                     />
                   </div>
                 )}
@@ -121,6 +150,7 @@ export default function Auth ({ hideAuthForm }) {
                       type='password'
                       id='password'
                       placeholder='~N}ypepD6^5(U;~B'
+                      required
                     />
                   </div>
                 )}
@@ -132,13 +162,23 @@ export default function Auth ({ hideAuthForm }) {
                       type='password'
                       id='new-password'
                       placeholder='~N}ypepD6^5(U;~B'
+                      required
                     />
                   </div>
                 )}
               </div>
-              <div className='auth-btn-container'>
-                <button className='auth-form-btn' type='submit'>
-                  {authButtonText}
+              <div className='auth-btn-container' >
+                <button className='auth-form-btn' type='submit' disabled={loading}>
+                  {loading ? (
+                    <div className='auth-submit-loader'>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  ) : (
+                    authButtonText
+                  )}
                 </button>
               </div>
             </form>
