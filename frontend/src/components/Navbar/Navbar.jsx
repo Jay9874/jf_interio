@@ -55,7 +55,6 @@ export default function Navbar ({ navlinks }) {
 
   const handleLinkClick = e => {
     setMenuOpen(false)
-    hideAuthForm()
     if (toggleMenu === 'active') {
       setToggleMenu('out')
     }
