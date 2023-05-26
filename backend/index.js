@@ -26,6 +26,8 @@ app.get('/api', (req, res) => {
   res.send('Hello World')
 })
 
+process.env.CI = false
+
 // Frontend Routes
 app.use(express.static(path.resolve(__dirname, '../frontend', 'build')))
 app.get('*', (req, res) => {
