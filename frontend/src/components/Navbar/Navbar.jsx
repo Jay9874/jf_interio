@@ -14,6 +14,14 @@ export default function Navbar ({ navlinks }) {
   const [displayDropdown, setDisplayDropdown] = useState('none')
   const [linkFade, setLinkFade] = useState('')
 
+  useEffect(() => {
+    // ...
+    window.addEventListener('scroll', hideAuthForm) // add event listener
+    return () => {
+      window.removeEventListener('scroll', hideAuthForm) // clean up
+    }
+  }, [authVisible]) // run when scroll direction changes
+
   const updateDimensions = () => {
     setWidth(window.innerWidth)
     if (width > 1082) {
@@ -47,6 +55,7 @@ export default function Navbar ({ navlinks }) {
 
   const handleLinkClick = e => {
     setMenuOpen(false)
+    hideAuthForm()
     if (toggleMenu === 'active') {
       setToggleMenu('out')
     }
@@ -58,7 +67,7 @@ export default function Navbar ({ navlinks }) {
 
   const handleNavIconClick = e => {
     handleLinkClick()
-    setAuthVisible((prev) => !prev);
+    setAuthVisible(prev => !prev)
   }
   function hideAuthForm () {
     setAuthVisible(false)
@@ -84,7 +93,7 @@ export default function Navbar ({ navlinks }) {
               </div>
             ) : (
               <div
-                className='navlink-item'
+                className='navlink-item navlink-icon'
                 key={index}
                 onClick={handleNavIconClick}
               >
@@ -130,7 +139,7 @@ export default function Navbar ({ navlinks }) {
           </div>
         </div>
       </div>
-      {authVisible && <Auth hideAuthForm={hideAuthForm} />}
+      {authVisible && <Auth hideAuthForm={hideAuthForm}/>}
     </div>
   )
 }

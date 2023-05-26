@@ -1,15 +1,36 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './auth.css'
 
-export default function Auth () {
+export default function Auth ({ hideAuthForm }) {
   const [login, setLogin] = useState(true)
   const [authHeading, setAuthHeading] = useState('Welcome Back')
   const [authButtonText, setAuthButtonText] = useState('Login')
+  const authFormRef = useRef(null)
+  const wrapperRef = useRef(null)
+  useOutsideAlerter(wrapperRef)
+  function useOutsideAlerter (ref) {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside (event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          hideAuthForm()
+        }
+      }
+      // Bind the event listener
+      authFormRef.current.addEventListener('mousedown', handleClickOutside)
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }, [ref])
+  }
+
   return (
-    <div className='auth-form-popup'>
+    <div className='auth-form-popup' ref={authFormRef}>
       <div className='auth-shadow-container'>
         <div className='auth-content-container'>
-          <div className='auth-form-container'>
+          <div className='auth-form-container' ref={wrapperRef}>
             <div className='auth-form-main'>
               <div className='auth-form-switcher'>
                 <div className='auth-form-switcher-btns form-switch-login'>

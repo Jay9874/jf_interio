@@ -18,6 +18,7 @@ ion-icon {
     padding: 0 135px;
     align-content: center;
     min-height: 148px;
+    z-index: 3;
 }
 
 .links {
@@ -167,7 +168,7 @@ ion-icon {
     background-color: #deddda;
     width: 100%;
     height: calc(100vh - 148px);
-    z-index: -1;
+    z-index: 2;
 }
 
 .navbar-dropdown-container {
