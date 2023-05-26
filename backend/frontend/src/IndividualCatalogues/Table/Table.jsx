@@ -1,7 +1,7 @@
 import React from 'react'
 import './table.css'
 
-import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
+import CatalogueSpecs from '../CatalogueSpecs/CatalogueSpecs'
 export default function Table () {
   const allCatalogues = [
     { title: 'Table' },

@@ -21,18 +21,12 @@ app.use(cors())
 const authRoutes = require('./routes/auth')
 app.use('/api/auth', authRoutes)
 
-// Testing the server
-app.get('/api', (req, res) => {
-  res.send('Hello World')
-})
-
-process.env.CI = false
 
 // Frontend Routes
-app.use(express.static(path.resolve(__dirname, '../frontend', 'build')))
+app.use(express.static(path.resolve(__dirname, 'frontend', 'build')))
 app.get('*', (req, res) => {
   res.sendFile(
-    path.resolve(__dirname, '../frontend', 'build', 'index.html'),
+    path.resolve(__dirname, 'frontend', 'build', 'index.html'),
     function (err) {
       if (err) {
         res.status(500).send(err)

@@ -1,6 +1,6 @@
 import React from 'react'
 import './showcase.css'
-import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
+import CatalogueSpecs from '../CatalogueSpecs/CatalogueSpecs'
 
 export default function Showcase () {
   const allCatalogues = [

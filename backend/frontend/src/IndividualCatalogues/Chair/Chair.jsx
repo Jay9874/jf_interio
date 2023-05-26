@@ -1,6 +1,6 @@
 import React from 'react'
 import './chair.css'
-import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
+import CatalogueSpecs from '../CatalogueSpecs/CatalogueSpecs'
 
 export default function Chair () {
   const allCatalogues = [

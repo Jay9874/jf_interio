@@ -1,6 +1,6 @@
 import React from 'react'
 import './tvunit.css'
-import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
+import CatalogueSpecs from '../CatalogueSpecs/CatalogueSpecs'
 
 export default function TVUnit () {
   const allCatalogues = [

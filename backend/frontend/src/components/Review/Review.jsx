@@ -27,15 +27,6 @@ export default function Review () {
     }
   ])
 
-{/*  React.useEffect(() => {
-    fetch('http://localhost:5000/reviews')
-      .then(res => res.json())
-      .then(data => {
-        setReviews(data)
-      })
-  }, [])
- */}
-
   return (
     <div className='review-section'>
       <div className='review-container '>

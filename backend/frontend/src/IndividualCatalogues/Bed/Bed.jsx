@@ -1,6 +1,6 @@
 import React from 'react'
 import './bed.css'
-import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
+import CatalogueSpecs from '../CatalogueSpecs/CatalogueSpecs'
 
 export default function Bed () {
   const allCatalogues = [

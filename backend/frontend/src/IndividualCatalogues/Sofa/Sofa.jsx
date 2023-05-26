@@ -1,7 +1,7 @@
 import React from 'react'
 import './sofa.css'
 
-import CatalogueSpecs from '../../IndividualCatalogues/CatalogueSpecs/CatalogueSpecs'
+import CatalogueSpecs from '../CatalogueSpecs/CatalogueSpecs'
 
 export default function Sofa () {
   const allCatalogues = [
