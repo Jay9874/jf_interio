@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bd7658e2.css",
+    "main.js": "/static/js/main.b87e5d84.js",
+    "static/js/496.2e7f66eb.chunk.js": "/static/js/496.2e7f66eb.chunk.js",
+    "static/media/dressingtable.jpg": "/static/media/dressingtable.6e958c10cc84fb8af458.jpg",
+    "static/media/tvunit.jpg": "/static/media/tvunit.c87d3b82ac35a3853f35.jpg",
+    "static/media/sink.jpg": "/static/media/sink.997dc0ebf94d83511e29.jpg",
+    "static/media/sofabed.jpg": "/static/media/sofabed.448bb09a2eaf877eac2b.jpg",
+    "static/media/kitchencabinet.jpg": "/static/media/kitchencabinet.1bb34ce05eec81b8fffa.jpg",
+    "static/media/chair.jpg": "/static/media/chair.65645e5c4a1b6a5fb4e8.jpg",
+    "static/media/chimney.jpg": "/static/media/chimney.2acfda47a1dd456ee1d2.jpg",
+    "static/media/trolley.jpg": "/static/media/trolley.91a6d3bd177491c1992c.jpg",
+    "static/media/showcase.jpg": "/static/media/showcase.9acdbbadf9d350fbd1b9.jpg",
+    "static/media/table.jpg": "/static/media/table.130cf0eb3b42cd0871d6.jpg",
+    "static/media/bed.jpg": "/static/media/bed.01d34d9482ce7891795f.jpg",
+    "static/media/sidetable.jpg": "/static/media/sidetable.6f54c84b5222a6df548a.jpg",
+    "static/media/cat_bed.png": "/static/media/cat_bed.c68cebacf9bb72895ce0.png",
+    "static/media/offer_bg.webp": "/static/media/offer_bg.905f1ccdfff6c2d7a064.webp",
+    "static/media/wardrobe.jpg": "/static/media/wardrobe.4400ff025e228f76240c.jpg",
+    "static/media/explore.webp": "/static/media/explore.ebeeaaa1a78ce9e9dcd8.webp",
+    "static/media/sofa_chair.webp": "/static/media/sofa_chair.df8acee8c3f8ef51d9f0.webp",
+    "static/media/landing_page.webp": "/static/media/landing_page.205e577890b720768648.webp",
+    "static/media/cat_cabinet.png": "/static/media/cat_cabinet.7dc26e440eb719b4c660.png",
+    "static/media/cat_sofa.webp": "/static/media/cat_sofa.54a196882cf59520c305.webp",
+    "index.html": "/index.html",
+    "main.bd7658e2.css.map": "/static/css/main.bd7658e2.css.map",
+    "main.b87e5d84.js.map": "/static/js/main.b87e5d84.js.map",
+    "496.2e7f66eb.chunk.js.map": "/static/js/496.2e7f66eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd7658e2.css",
+    "static/js/main.b87e5d84.js"
+  ]
+}

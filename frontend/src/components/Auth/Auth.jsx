@@ -20,6 +20,10 @@ export default function Auth ({ hideAuthForm, changeAuthState }) {
     confirmPassword: ''
   })
 
+  if (process.env.NODE_ENV === 'development') {
+    axios.defaults.baseURL = 'http://localhost:8080'
+  }
+
   const authFormRef = useRef(null)
   const wrapperRef = useRef(null)
   useOutsideAlerter(wrapperRef)
@@ -61,16 +65,15 @@ export default function Auth ({ hideAuthForm, changeAuthState }) {
     const body = login ? authFormLogin : authFormSignup
     const endPoint = login ? 'login' : 'signup'
     e.preventDefault()
-    if ( !login && authFormSignup.password !== authFormSignup.confirmPassword) {
+    if (!login && authFormSignup.password !== authFormSignup.confirmPassword) {
       setError("Passwords don't match")
       return
     }
     setLoading(true)
     axios
-      .post(`http://localhost:8080/api/auth/${endPoint}`, body)
+      .post(`/api/auth/${endPoint}`, body)
       .then(res => {
         setLoading(false)
-        console.log(res.data)
         localStorage.setItem('authToken', res.data.token)
         changeAuthState(true)
         hideAuthForm()

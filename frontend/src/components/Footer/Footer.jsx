@@ -2,12 +2,13 @@ import './footer.css'
 import { App_Store_Badge, Google_Play_Badge } from '../../assets'
 import FooterLink from './FooterLink/FooterLink'
 import { footerlinks } from '../../constants'
+import { useEffect } from 'react'
+import axios from 'axios'
 
 export default function Footer () {
   const getYear = () => {
     return new Date().getFullYear()
   }
-
   return (
     <footer>
       <div className='footer-container'>
