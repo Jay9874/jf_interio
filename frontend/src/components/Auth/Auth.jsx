@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import './auth.css'
+import axios from 'axios'
 
-export default function Auth ({ hideAuthForm }) {
+export default function Auth ({ hideAuthForm, changeAuthState }) {
   const [login, setLogin] = useState(true)
   const [authHeading, setAuthHeading] = useState('Welcome Back')
   const [authButtonText, setAuthButtonText] = useState('Login')
@@ -45,6 +46,7 @@ export default function Auth ({ hideAuthForm }) {
     setLoading(false)
     setAuthHeading('Welcome Back')
     setAuthButtonText('Login')
+    setError('')
   }
 
   function switchToSignup () {
@@ -52,12 +54,44 @@ export default function Auth ({ hideAuthForm }) {
     setLoading(false)
     setAuthHeading("Let's start afresh")
     setAuthButtonText('Create')
+    setError('')
   }
 
   function handleAuthSubmit (e) {
+    const body = login ? authFormLogin : authFormSignup
+    const endPoint = login ? 'login' : 'signup'
     e.preventDefault()
+    if ( !login && authFormSignup.password !== authFormSignup.confirmPassword) {
+      setError("Passwords don't match")
+      return
+    }
     setLoading(true)
-    setError('')
+    axios
+      .post(`http://localhost:8080/api/auth/${endPoint}`, body)
+      .then(res => {
+        setLoading(false)
+        console.log(res.data)
+        localStorage.setItem('authToken', res.data.token)
+        changeAuthState(true)
+        hideAuthForm()
+      })
+      .catch(err => {
+        setLoading(false)
+        changeAuthState(false)
+        if (err.response) {
+          setError(err.response.data.error)
+        } else {
+          setError('Server is busy. Please try again later.')
+        }
+      })
+  }
+  function handleSignupChange (e) {
+    const { name, value } = e.target
+    setAuthFormSignup({ ...authFormSignup, [name]: value })
+  }
+  function handleLoginChange (e) {
+    const { name, value } = e.target
+    setAuthFormLogin({ ...authFormLogin, [name]: value })
   }
   return (
     <div
@@ -98,10 +132,13 @@ export default function Auth ({ hideAuthForm }) {
                     <label htmlFor='fullname'>Full Name</label>
                     <input
                       autoComplete='off'
+                      name='fullname'
                       className='auth-form-inputs'
                       type='text'
                       id='fullname'
                       placeholder='Ansh Sharma'
+                      value={authFormSignup.fullname}
+                      onChange={handleSignupChange}
                       required
                     />
                   </div>
@@ -115,6 +152,9 @@ export default function Auth ({ hideAuthForm }) {
                       type='text'
                       id='username'
                       placeholder='anshsharma'
+                      name='username'
+                      value={authFormSignup.username}
+                      onChange={handleSignupChange}
                       required
                     />
                   </div>
@@ -127,6 +167,9 @@ export default function Auth ({ hideAuthForm }) {
                     type='email'
                     id='email'
                     placeholder='email@example.com'
+                    name='email'
+                    value={login ? authFormLogin.email : authFormSignup.email}
+                    onChange={login ? handleLoginChange : handleSignupChange}
                     required
                   />
                 </div>
@@ -138,6 +181,9 @@ export default function Auth ({ hideAuthForm }) {
                       type='password'
                       id='password'
                       placeholder='~N}ypepD6^5(U;~B'
+                      name='password'
+                      value={authFormLogin.password}
+                      onChange={handleLoginChange}
                       required
                     />
                   </div>
@@ -150,25 +196,35 @@ export default function Auth ({ hideAuthForm }) {
                       type='password'
                       id='password'
                       placeholder='~N}ypepD6^5(U;~B'
+                      name='password'
+                      value={authFormSignup.password}
+                      onChange={handleSignupChange}
                       required
                     />
                   </div>
                 )}
                 {!login && (
                   <div className='auth-input-item auth-newpassword-container'>
-                    <label htmlFor='new-password'>Repeat Password</label>
+                    <label htmlFor='new-password'>Confirm Password</label>
                     <input
                       className='auth-form-inputs'
                       type='password'
                       id='new-password'
                       placeholder='~N}ypepD6^5(U;~B'
+                      name='confirmPassword'
+                      value={authFormSignup.confirmPassword}
+                      onChange={handleSignupChange}
                       required
                     />
                   </div>
                 )}
               </div>
-              <div className='auth-btn-container' >
-                <button className='auth-form-btn' type='submit' disabled={loading}>
+              <div className='auth-btn-container'>
+                <button
+                  className='auth-form-btn'
+                  type='submit'
+                  disabled={loading}
+                >
                   {loading ? (
                     <div className='auth-submit-loader'>
                       <div></div>
@@ -181,6 +237,16 @@ export default function Auth ({ hideAuthForm }) {
                   )}
                 </button>
               </div>
+              {error && (
+                <div className='auth-error-container'>
+                  <span className='auth-error-icon'>
+                    <ion-icon name='alert-circle-outline'></ion-icon>
+                  </span>
+                  <span className='auth-error-text'>
+                    <p className='auth-error'>{error}</p>
+                  </span>
+                </div>
+              )}
             </form>
           </div>
         </div>

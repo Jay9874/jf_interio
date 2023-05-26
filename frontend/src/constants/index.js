@@ -22,9 +22,9 @@ const navlinks = [
   { tag: 'Kitchen', url: '/kitchen', type: 'text', icon: 'none' },
   { tag: 'Living', url: '/livingroom', type: 'text', icon: 'none' },
   { tag: 'Repairing', url: '/repair', type: 'text', icon: 'none' },
-  { tag: 'Cart', url: '/cart', type: 'icon', name: 'cart-outline' },
+  { tag: 'cart', url: '/cart', type: 'icon', name: 'cart-outline' },
   {
-    tag: 'Profile',
+    tag: 'profile',
     url: '/profile',
     type: 'icon',
     name: 'person-circle-outline'

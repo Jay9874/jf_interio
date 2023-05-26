@@ -28,8 +28,27 @@ function App () {
           <Route exact path='/kitchen' element={<Kitchen />} />
           <Route exact path='/bedroom' element={<Bedroom />} />
           <Route exact path='/livingroom' element={<Livingroom />} />
-          <Route exact path='/profile' element={<Profile />} />
-          <Route exact path='/cart' element={<Cart />} />
+
+          <Route
+            exact
+            path='/profile'
+            element={
+              <Protected isAuth={isAuth}>
+                <Profile />
+              </Protected>
+            }
+          />
+
+          <Route
+            exact
+            path='/cart'
+            element={
+              <Protected isAuth={isAuth}>
+                <Cart />
+              </Protected>
+            }
+          />
+
           <Route exact path='/:categorie' element={<MyRoutes />} />
         </Routes>
       </BrowserRouter>

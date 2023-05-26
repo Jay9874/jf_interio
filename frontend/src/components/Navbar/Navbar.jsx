@@ -66,10 +66,18 @@ export default function Navbar ({ navlinks }) {
 
   const handleNavIconClick = e => {
     handleLinkClick()
-    setAuthVisible(prev => !prev)
+
+    if(!isAuth) {
+      setAuthVisible(true)
+    }else{
+      setAuthVisible(false)
+    }
   }
   function hideAuthForm () {
     setAuthVisible(false)
+  }
+  function changeAuthState (state) {
+    setIsAuth(state)
   }
 
   return (
@@ -92,6 +100,7 @@ export default function Navbar ({ navlinks }) {
               </div>
             ) : (
               <div
+                name={item.tag}
                 className='navlink-item navlink-icon'
                 key={index}
                 onClick={handleNavIconClick}
@@ -138,7 +147,7 @@ export default function Navbar ({ navlinks }) {
           </div>
         </div>
       </div>
-      {authVisible && <Auth hideAuthForm={hideAuthForm}/>}
+      {authVisible && <Auth hideAuthForm={hideAuthForm} changeAuthState={changeAuthState}/>}
     </div>
   )
 }
