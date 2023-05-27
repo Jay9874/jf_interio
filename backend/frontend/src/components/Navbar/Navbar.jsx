@@ -14,14 +14,7 @@ export default function Navbar ({ navlinks }) {
   const [displayDropdown, setDisplayDropdown] = useState('none')
   const [linkFade, setLinkFade] = useState('')
 
-  useEffect(() => {
-    // ...
-    window.addEventListener('scroll', hideAuthForm) // add event listener
-    return () => {
-      window.removeEventListener('scroll', hideAuthForm) // clean up
-    }
-  }, [authVisible]) // run when scroll direction changes
-
+  
   const updateDimensions = () => {
     setWidth(window.innerWidth)
     if (width > 1082) {
