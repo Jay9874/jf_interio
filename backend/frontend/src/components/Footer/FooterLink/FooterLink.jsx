@@ -7,28 +7,25 @@ export default function FooterLink ({ title, links }) {
   const [width, setWidth] = useState(window.innerWidth)
   const [toggleMenu, setToggleMenu] = useState('')
 
-  const updateLayout = () => {
-    if (width <= 1024) {
-      if (toggleMenu === 'active') {
-        setContainerExpanded(true)
-      } else {
-        setContainerExpanded(false)
-      }
-      setFooterSmall(true)
-    } else {
-      setToggleMenu('')
-      setFooterSmall(false)
-      setContainerExpanded(true)
-    }
-  }
   useEffect(() => {
     const updateDimensions = () => {
       setWidth(window.innerWidth)
-      updateLayout()
+      if (width <= 1024) {
+        if (toggleMenu === 'active') {
+          setContainerExpanded(true)
+        } else {
+          setContainerExpanded(false)
+        }
+        setFooterSmall(true)
+      } else {
+        setToggleMenu('')
+        setFooterSmall(false)
+        setContainerExpanded(true)
+      }
     }
     window.addEventListener('resize', updateDimensions)
     return () => window.removeEventListener('resize', updateDimensions)
-  }, [width])
+  }, [width, toggleMenu])
 
   function handleFooterHeadClick (e) {
     if (toggleMenu === 'active') {
