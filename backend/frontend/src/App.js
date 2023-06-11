@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
 import './App.css'
 import { Footer, About, Navbar } from './components/index'
 import {
@@ -16,7 +15,7 @@ import MyRoutes from './routes/MyRoutes'
 import Protected from './utils/Protected'
 
 function App () {
-  const [isAuth, setIsAuth] = useState(false)
+  const isAuth = false;
   return (
     <div className='App'>
       <BrowserRouter>

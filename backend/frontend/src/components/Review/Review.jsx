@@ -3,7 +3,7 @@ import './review.css'
 import RevCard from '../RevCard/RevCard'
 
 export default function Review () {
-  const [reviews, setReviews] = React.useState([
+  const reviews = [
     {
       id: 1,
       name: 'Shubham',
@@ -25,7 +25,7 @@ export default function Review () {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl ultricies nunc, nec ultricies nisl nunc eget nisl. Sed vitae nisl eget nisl ultricies ultrices. Sed vitae nisl eget nisl ultricies ultrices.',
       rating: 4
     }
-  ])
+  ]
 
   return (
     <div className='review-section'>

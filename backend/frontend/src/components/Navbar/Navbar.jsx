@@ -14,16 +14,15 @@ export default function Navbar ({ navlinks }) {
   const [displayDropdown, setDisplayDropdown] = useState('none')
   const [linkFade, setLinkFade] = useState('')
 
-  
-  const updateDimensions = () => {
-    setWidth(window.innerWidth)
-    if (width > 1082) {
-      setMenuOpen(false)
-      setToggleMenu('')
-      setDisplayDropdown('none')
-    }
-  }
   useEffect(() => {
+    const updateDimensions = () => {
+      setWidth(window.innerWidth)
+      if (width > 1082) {
+        setMenuOpen(false)
+        setToggleMenu('')
+        setDisplayDropdown('none')
+      }
+    }
     window.addEventListener('resize', updateDimensions)
     return () => window.removeEventListener('resize', updateDimensions)
   }, [width])
@@ -60,9 +59,9 @@ export default function Navbar ({ navlinks }) {
   const handleNavIconClick = e => {
     handleLinkClick()
 
-    if(!isAuth) {
+    if (!isAuth) {
       setAuthVisible(true)
-    }else{
+    } else {
       setAuthVisible(false)
     }
   }
@@ -140,7 +139,9 @@ export default function Navbar ({ navlinks }) {
           </div>
         </div>
       </div>
-      {authVisible && <Auth hideAuthForm={hideAuthForm} changeAuthState={changeAuthState}/>}
+      {authVisible && (
+        <Auth hideAuthForm={hideAuthForm} changeAuthState={changeAuthState} />
+      )}
     </div>
   )
 }
