@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import './profile.css'
 
 export default function Profile () {
-  const [isAuth, setIsAuth] = useState(false)
+  const isAuth = false
   return (
     <>
       {isAuth ? (
