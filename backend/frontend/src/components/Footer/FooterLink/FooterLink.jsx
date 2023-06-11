@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import './footerlink.css'
 
 export default function FooterLink ({ title, links }) {
@@ -59,7 +58,7 @@ export default function FooterLink ({ title, links }) {
           <ul className='footer-list-items'>
             {links.map((link, index) => (
               <li key={index}>
-                <Link to='/'>{link.tag}</Link>
+                <a href='/'>{link.tag}</a>
               </li>
             ))}
           </ul>
