@@ -6,7 +6,7 @@ export default function Auth ({ hideAuthForm, changeAuthState }) {
   const [login, setLogin] = useState(true)
   const [authHeading, setAuthHeading] = useState('Welcome Back')
   const [authButtonText, setAuthButtonText] = useState('Login')
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [authFormLogin, setAuthFormLogin] = useState({
     email: '',

@@ -59,7 +59,7 @@
 /******************************** Switcher animation ************************/
 .form-switch-login {
     position: relative;
-    border-radius: 20px 26px 0 0;
+    border-radius: 20px 20px 0 0;
 
 }
 
@@ -70,7 +70,7 @@
 
 .form-switch-signup {
     position: relative;
-    border-radius: 26px 20px 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .form-switch-login.active ::after {
@@ -81,7 +81,7 @@
     bottom: 0;
     right: 0;
     background: transparent;
-    border-radius: 0 0 26px 0;
+    border-radius: 0 0 20px 0;
     box-shadow: 26px 0 0 0 var(--universal-bg-color);
 }
 
@@ -93,7 +93,7 @@
     bottom: 0;
     left: 0;
     background: transparent;
-    border-radius: 0 0 0 26px;
+    border-radius: 0 0 0 20px;
     box-shadow: -26px 0 0 0 var(--universal-bg-color);
 }
 
