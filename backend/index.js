@@ -20,6 +20,9 @@ app.use(cors())
 // Defining the routes
 const authRoutes = require('./routes/auth')
 app.use('/api/auth', authRoutes)
+app.use('/api/test', (req, res) =>{
+  res.send('Hello from the server')
+})
 
 
 // Frontend Routes
