@@ -1,5 +1,4 @@
 require('dotenv').config()
-const { config } = require('dotenv')
 const mongoose = require('mongoose')
 const encrypt = require('mongoose-encryption')
 const secret = process.env.ENCRYPTION_KEY
