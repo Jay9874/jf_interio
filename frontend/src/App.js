@@ -32,8 +32,8 @@ function App () {
           />
           <Route
             exact
-            path='/test'
-            element={<div>Hello, this is a new route for testing...</div>}
+            path='/test2'
+            element={<div>Hello, this is a new route for testing number 2...</div>}
           />
           <Route exact path='/kitchen' element={<Kitchen />} />
           <Route exact path='/bedroom' element={<Bedroom />} />
