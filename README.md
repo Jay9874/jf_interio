@@ -1,37 +1,47 @@
 # JF interio
+
 A simplified and convenient way of purchasing furniture.
 
+## Who are we?
 
-### For developers
-## Available Scripts
+We are serving people in the Kolkata and beyond since last 60 years. During these years, we pioneered the art of manufacturing furniture in the both wooden and plywood artifacts. We are guided by our principle,
 
-In the project directory, you can run:
+> "Truth will be victorious eternally"
 
-### `npm start`
+## Why us?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- We are a team of highly skilled engineers, love to dedicate ourselves crafting convenience and glorious.
+- We make our products with a 'mm' level of accuracy.
+- Furnished by us are guaranteed to last centuries.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## [Our platform](https://jfinterio.vercel.app) 
 
-### `npm test`
+![store_home_page](frontend/public/home.png)
+**_our home page_**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Considerations
 
-### `npm run build`
+- We wanted to make our web presence refreshing, enjoying and user experience like never before.
+- Home designed keeping simplicity and efficiency.
+- Search through a overwhelming 5000+ furniture designs.
+- Custom design feature to let you build your own in furniture with size, color and variant.
+- Augmented Reality let you put your furniture in real world.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How you explore?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We have kept the catalogs well organized into its specific spaces. That helps in finding your need quick. Let's see how...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Go the space, lets say "Bedroom".
+2. Select the category, lets say "Bed".
+3. Choose type in above selected category, lets say "Double Bed".
+4. Explore a large volume of designs on the type as per size and variant.
 
-## Learn More
+   ![bedroom_catalog](frontend/public/bedroom.png)
+   ***view of Bedroom space***
+### You researches are safe
+Our platform with "Cart" and "Profile" is there to help you out in saving your previous visit. Research relentlessly and store product for future comings. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Having issues?
+- Reach out to us on this [this](jayprakashsharma225@gmail.com) email address.
+- Create issue on this repo. Make sure a similar issue doesn't exists.
+- Contact us if you are one who want more out of our platform. We love to hear your ideas.
