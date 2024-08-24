@@ -14,7 +14,7 @@ export default function Cover () {
             <h1>
               Now, Furniture
               <br />
-              Shopping Is Simple
+              Shopping Is as Simple as a Snap
             </h1>
           </div>
           <div className='cover-text-desc cover-text-item'>
