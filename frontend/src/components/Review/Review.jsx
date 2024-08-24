@@ -20,7 +20,7 @@ export default function Review () {
       id: 4,
       name: 'Jay',
       review:
-        'We have engineered and pioneered this craft since centuries now. We are available in your area to serve you better.',
+        'We have engineered and pioneered this craft since centuries now.',
       rating: 4
     }
   ]
