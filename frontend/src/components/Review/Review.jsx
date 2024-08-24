@@ -7,22 +7,20 @@ export default function Review () {
     {
       id: 1,
       name: 'Shubham',
-      review:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl ultricies nunc, nec ultricies nisl nunc eget nisl. Sed vitae nisl eget nisl ultricies ultrices. Sed vitae nisl eget nisl ultricies ultrices.',
-      rating: 5
+      review: 'This is our store, we love to craft memories and marvels.',
+      rating: 4
     },
     {
       id: 3,
       name: 'Kirti',
-      review:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl ultricies nunc, nec ultricies nisl nunc eget nisl. Sed vitae nisl eget nisl ultricies ultrices. Sed vitae nisl eget nisl ultricies ultrices.',
+      review: 'As Bhaiya said in previous review, "We love to craft memories"',
       rating: 3
     },
     {
       id: 4,
       name: 'Jay',
       review:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl ultricies nunc, nec ultricies nisl nunc eget nisl. Sed vitae nisl eget nisl ultricies ultrices. Sed vitae nisl eget nisl ultricies ultrices.',
+        'We have engineered and pioneered this craft since centuries now.',
       rating: 4
     }
   ]

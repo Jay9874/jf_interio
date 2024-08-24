@@ -20,10 +20,9 @@ app.use(cors())
 // Defining the routes
 const authRoutes = require('./routes/auth')
 app.use('/api/auth', authRoutes)
-app.use('/api/test', (req, res) =>{
+app.use('/api/test', (req, res) => {
   res.send('Hello from the server')
 })
-
 
 // Frontend Routes
 app.use(express.static(path.resolve(__dirname, 'frontend', 'build')))
@@ -41,6 +40,6 @@ app.get('*', (req, res) => {
 //Connect to the database before listening
 connectDB().then(() => {
   app.listen(PORT, () => {
-    console.log('listening for requests')
+    console.log(`listening for requests on port: ${PORT}`)
   })
 })

@@ -4,6 +4,10 @@ const encrypt = require('mongoose-encryption')
 const secret = process.env.ENCRYPTION_KEY
 
 const UserSchema = mongoose.Schema({
+  ID:{
+    type: 'UUID',
+    required: [true, 'ID is required']
+  },
   fullname: {
     type: String,
     required: [true, 'First Name is required']
