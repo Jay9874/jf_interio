@@ -30,6 +30,11 @@ function App () {
             path='/test'
             element={<div>Hello, this a test router</div>}
           />
+          <Route
+            exact
+            path='/test'
+            element={<div>Hello, this is a new route for testing...</div>}
+          />
           <Route exact path='/kitchen' element={<Kitchen />} />
           <Route exact path='/bedroom' element={<Bedroom />} />
           <Route exact path='/livingroom' element={<Livingroom />} />
