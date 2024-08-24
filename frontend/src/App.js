@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
+import { Analytics } from '@vercel/analytics/react'
 import { Footer, About, Navbar } from './components/index'
 import {
   Home,
@@ -15,7 +16,7 @@ import MyRoutes from './routes/MyRoutes'
 import Protected from './utils/Protected'
 
 function App () {
-  const isAuth = false;
+  const isAuth = false
   return (
     <div className='App'>
       <BrowserRouter>
@@ -52,6 +53,7 @@ function App () {
         </Routes>
       </BrowserRouter>
       <Footer />
+      <Analytics />
     </div>
   )
 }
