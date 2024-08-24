@@ -2,9 +2,10 @@
     "builds":[
         {
             "src":"./index.js",
-            "use":"npm run build"
+            "use":"@vercel/node"
         }
     ],
+    "buildCommand": "npm run build",
     "routes":[
         {
             "src":"/(.*)",
